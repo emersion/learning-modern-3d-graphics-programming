@@ -1,0 +1,276 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app18.us.archive.org";archive_analytics.values.server_ms=151;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Primitive Drawing</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 07.html" title="Chapter&nbsp;7.&nbsp;World in Motion"><link rel="prev" href="Tutorial 07.html" title="Chapter&nbsp;7.&nbsp;World in Motion"><link rel="next" href="Tut07 Shared Uniforms.html" title="Shared Uniforms"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tut07%20Primitive%20Drawing.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tut07%20Primitive%20Drawing.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192605" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813162104/http://www.arcsynthesis.org/gltut/Positioning/Tut07%20Primitive%20Drawing.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:05 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813162104/http://www.arcsynthesis.org/gltut/Positioning/Tut07%20Primitive%20Drawing.html" title="16:21:04 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:05 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205013835/http://www.arcsynthesis.org/gltut/Positioning/Tut07%20Primitive%20Drawing.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:05 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192605*/http://www.arcsynthesis.org/gltut/Positioning/Tut07%20Primitive%20Drawing.html" title="See a list of every capture for this URL">36 captures</a>
+           <div class="r" title="Timespan for captures of this URL">19 Feb 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:010011211031_2012:-1:201121100021_2013:-1:112001110211_2014:-1:000100010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Primitive Drawing</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tutorial 07.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;7.&nbsp;World in Motion</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut07 Shared Uniforms.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e7288"></a>Primitive Drawing</h2></div></div></div><p>We skipped over how the <code class="function">Mesh::Render</code> function and mesh loading
+            works. So let's cover that now.</p><p>The XML-based mesh files define a number of vertex attribute arrays, followed by a
+            number of rendering commands. The format fully supports all features of OpenGL,
+            including options not previously discussed. One of these options deals with how vertex
+            data is interpreted by OpenGL.</p><p>The <code class="function">glDraw*</code> commands, whether using indexed rendering or array
+            rendering, establish a <em class="glossterm">vertex stream.</em> A vertex stream is an
+            ordered list of vertices, with each vertex having a specific set of vertex attributes. A
+            vertex stream is processed by the vertex shader in order.</p><p>In array rendering, the order is determined by the order of the vertices in the
+            attribute arrays. In indexed rendering, the order is determined by the order of the
+            indices.</p><p>Once the stream is processed by the vertex shader, it must be interpreted into
+            something meaningful by OpenGL. Every <code class="function">glDraw*</code> command takes, as its
+            first parameter, a value that tells OpenGL how to interpret the stream. Thus far, we
+            have used <code class="literal">GL_TRIANGLES</code>, but there are many options. This parameter is
+            called the <em class="glossterm">rendering mode</em> or
+            <em class="glossterm">primitive</em>.</p><p>The parameter actually determines two things. The first it determines is what kind of
+            things the vertex stream refers to; this is the <em class="glossterm">primitive type</em>.
+            OpenGL can render points and lines in addition to triangles. These are all different
+            primitive types.</p><p>The other thing the parameter determines is how to interpret the vertex stream for
+            that primitive type. This is the <em class="glossterm">primitive representation</em>.
+                <code class="literal">GL_TRIANGLES</code> says more than simply that the primitive type is
+            triangles.</p><p>What <code class="literal">GL_TRIANGLES</code> means is that a vertex stream will generate
+            triangles as follows: (0, 1, 2), (3, 4, 5), (6, 7, 8), &#8230;. The numbers represent vertices
+            in the vertex stream, not indexed rendering indices. Among other things, this means that
+            the vertex stream must have a length divisible by 3. For N vertices in the stream, this
+            representation will generate N / 3 triangles.</p><p>There are two other triangular primitive representations. They are both used in the
+            cylinder mesh, so let's take a look at that.</p><div class="example"><a name="d0e7343"></a><p class="title"><b>Example&nbsp;7.9.&nbsp;Cylinder Mesh File</b></p><div class="example-contents"><pre class="programlisting"><span class="code-tag">&lt;indices</span> <span class="code-attribute">cmd</span>=<span class="code-value">"tri-fan"</span> <span class="code-attribute">type</span>=<span class="code-value">"ushort"</span><span class="code-tag"> &gt;</span>0 1 3 5 7 9 11 ...<span class="code-tag">&lt;/indices&gt;</span>
+<span class="code-tag">&lt;indices</span> <span class="code-attribute">cmd</span>=<span class="code-value">"tri-fan"</span> <span class="code-attribute">type</span>=<span class="code-value">"ushort"</span><span class="code-tag"> &gt;</span>61 60 58 56 54 ...<span class="code-tag">&lt;/indices&gt;</span>
+<span class="code-tag">&lt;indices</span> <span class="code-attribute">cmd</span>=<span class="code-value">"tri-strip"</span> <span class="code-attribute">type</span>=<span class="code-value">"ushort"</span><span class="code-tag"> &gt;</span>1 2 3 4 5 6 7 8 ...<span class="code-tag">&lt;/indices&gt;</span></pre></div></div><br class="example-break"><p>Each <span class="quote">&#8220;<span class="quote">indices</span>&#8221;</span> element maps to a call to
+                <code class="function">glDrawElements</code> with the given index array. The
+                <span class="quote">&#8220;<span class="quote">cmd</span>&#8221;</span> attribute determines the primitive that will be passed to
+                <code class="function">glDrawElements</code>. The value <span class="quote">&#8220;<span class="quote">triangles</span>&#8221;</span> means to use
+            the <code class="literal">GL_TRIANGLES</code> primitive.</p><p>The <span class="quote">&#8220;<span class="quote">tri-fan</span>&#8221;</span> used above means to use the
+                <code class="literal">GL_TRIANGLE_FAN</code> primitive. This primitive has the triangle
+            primitive type, so this vertex stream will generate triangles. But it will generate them
+            using a different representation.</p><p><code class="literal">GL_TRIANGLES</code> takes each independent set of 3 vertices as a single
+            triangle. <code class="literal">GL_TRIANGLE_FAN</code> takes the first vertex and holds on to it.
+            Then, for every vertices and its next vertex, a triangle is made out of these two plus
+            the initial vertex. So <code class="literal">GL_TRIANGLE_FAN</code> will generate triangles as
+            follows: (0, 1, 2), (0, 2, 3), (0, 3, 4), &#8230;. Visually, a triangle fan looks like
+            this:</p><div class="figure"><a name="d0e7386"></a><p class="title"><b>Figure&nbsp;7.4.&nbsp;Triangle Fan</b></p><div class="figure-contents"><div class="mediaobject"><img src="TriangleFan.svg" alt="Triangle Fan"></div></div></div><br class="figure-break"><p>The numbers represent the order that the vertices are in in the vertex stream. The red
+            line shows the triangle edges that are directly specified by the vertex stream. All
+            other edges are generated automatically by the primitive representation.</p><p>This is why it is called a <span class="quote">&#8220;<span class="quote">fan</span>&#8221;</span>. The number of vertices in a triangle
+            fan vertex stream must be 3 or greater, but can be otherwise any number. For N vertices
+            in a stream, triangle fans will generate N-2 triangles.</p><p>The cylinder mesh uses two fans to cap render the end pieces of the cylinder.</p><p>The <span class="quote">&#8220;<span class="quote">tri-strip</span>&#8221;</span> in the cylinder mesh represents the
+                <code class="literal">GL_TRIANGLE_STRIP</code> primitive. As the name suggests, it has a
+            triangle primitive type. The primitive representation means that every 3 adjacent
+            vertices will generate a triangle, in order. So strips generate triangles as follows:
+            (0, 1, 2), (1, 2, 3), (2, 3, 4), &#8230;. Visually, a triangle strip looks like this:</p><div class="figure"><a name="d0e7409"></a><p class="title"><b>Figure&nbsp;7.5.&nbsp;Triangle Strip</b></p><div class="figure-contents"><div class="mediaobject"><img src="TriangleStrip.svg" alt="Triangle Strip"></div></div></div><br class="figure-break"><p>Like with triangle fans, the number of vertices must be 3 or greater, but can be any
+            number otherwise. For N vertices in a stream, triangle strips will generate N-2
+            triangles.</p><p>The cylinder mesh uses a single triangle strip to render the sides of the
+            cylinder.</p><p><b>Winding Order.&nbsp;</b>There is one other issue with triangle strips. This has to do with the winding
+                order of the triangles.</p><p>The winding order for the triangles in a strip looks like this:</p><div class="figure"><a name="d0e7426"></a><p class="title"><b>Figure&nbsp;7.6.&nbsp;Triangle Strips with Winding Order</b></p><div class="figure-contents"><div class="mediaobject"><img src="StripWindingOrder.svg" alt="Triangle Strips with Winding Order"></div></div></div><br class="figure-break"><p>Notice how it alternates between clockwise and counter-clockwise. This means that,
+            regardless of what face you consider front, and what face you cull, you'll always lose
+            about half of the faces.</p><p>However, OpenGL is rather intelligent about this. Triangle strips do face culling
+            differently. For every second triangle, the one who's winding order is opposite from the
+            first triangle's order, the winding order is considered backwards for culling
+            purposes.</p><p>So if you have set the front face to be clockwise, and have face culling cull
+            back-facing triangles, everything will work exactly as you expect so long as the order
+            of the first triangle is correct. Every even numbered triangle will be culled if it has
+            a clockwise winding, and every odd numbered triangle will be culled if it has a
+            counter-clockwise winding.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tutorial 07.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 07.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut07 Shared Uniforms.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;7.&nbsp;World in Motion&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192605/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Shared Uniforms</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:05 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:12 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

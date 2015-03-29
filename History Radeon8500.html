@@ -1,0 +1,297 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app0.us.archive.org";archive_analytics.values.server_ms=138;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Programming at Last</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="History of Graphics Hardware.html" title="Appendix&nbsp;B.&nbsp;History of PC Graphics Hardware"><link rel="prev" href="History GeForce.html" title="Vertices and Registers"><link rel="next" href="History GeForceFX.html" title="Dependency"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/History%20Radeon8500.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/History%20Radeon8500.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192611" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813145628/http://www.arcsynthesis.org/gltut/History%20Radeon8500.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:11 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813145628/http://www.arcsynthesis.org/gltut/History%20Radeon8500.html" title="14:56:28 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:11 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131227093301/http://www.arcsynthesis.org/gltut/History%20Radeon8500.html" title="27 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:11 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192611*/http://www.arcsynthesis.org/gltut/History%20Radeon8500.html" title="See a list of every capture for this URL">33 captures</a>
+           <div class="r" title="Timespan for captures of this URL">13 May 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000010021021_2012:-1:210021100021_2013:-1:112111211011_2014:-1:000100010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Programming at Last</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="History GeForce.html">Prev</a>&nbsp;</td><th width="60%" align="center">Appendix&nbsp;B.&nbsp;History of PC Graphics Hardware</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="History GeForceFX.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e16961"></a>Programming at Last</h2></div></div></div><p>How do you define a demarcation between non-programmable graphics chips and
+            programmable ones? We have seen that, even in the humble TNT days, there were a couple
+            of user-defined opcodes with several possible input values.</p><p>One way is to consider what programming is. Programming is not simply a mathematical
+            operation; programming needs conditional logic. Therefore, it is not unreasonable to say
+            that something is not truly programmable until there is the possibility of some form of
+            conditional logic.</p><p>And it is at this point where that first truly appears. It appears first in the
+                <span class="emphasis"><em>vertex</em></span> pipeline rather than the fragment pipeline. This seems
+            odd until one realizes how crucial fragment operations are to overall performance. It
+            therefore makes sense to introduce heavy programmability in the less
+            performance-critical areas of hardware first.</p><p>The GeForce 3, released in 2001 (a mere 3 years after the TNT), was the first hardware
+            to provide this level of programmability. While GeForce 3 hardware did indeed have the
+            fixed-function vertex pipeline, it also had very flexible programmable pipeline. The
+            retaining of the fixed-function code was a performance need; the vertex shader was not
+            as fast as the fixed-function one. It should be noted that the original X-Box's GPU,
+            designed in tandem with the GeForce 3, eschewed the fixed-functionality altogether in
+            favor of having multiple vertex shaders that could compute several vertices at a time.
+            This was eventually adopted for later GeForces.</p><p>Vertex shaders were pretty powerful, even in their first incarnation. While there was
+            no conditional branching, there was conditional logic, the equivalent of the ?:
+            operator. These vertex shaders exposed up to 128 <span class="type">vec4</span> uniforms, up to 16
+                <span class="type">vec4</span> inputs (still the modern limit), and could output 6
+                <span class="type">vec4</span> outputs. Two of the outputs, intended for colors, were lower
+            precisions than the others. There was a hard limit of 128 opcodes. These vertex shaders
+            brought full swizzling support and a plethora of math operations.</p><p>The GeForce 3 also added up to two more textures, for a total of four textures per
+            triangle. They were hooked directly into certain per-vertex outputs, because the
+            per-fragment pipeline did not have real programmability yet.</p><p>At this point, the holy grail of programmability at the fragment level was dependent
+            texture access. That is, being able to access a texture, do some arbitrary computations
+            on it, and then access another texture with the result. The GeForce 3 had some
+            facilities for that, but they were not very good ones.</p><p>The GeForce 3 used 8 register combiner stages instead of the 2 that the earlier cards
+            used. Their register files were extended to support two extra texture colors and a few
+            more tricks. But the main change was something that, in OpenGL terminology, would be
+            called <span class="quote">&#8220;<span class="quote">texture shaders.</span>&#8221;</span></p><p>What texture shaders did was allow the user to, instead of accessing a texture,
+            perform a computation on that texture's texture unit. This was much like the old texture
+            environment functionality, except only for texture coordinates. The textures were
+            arranged in a sequence. And instead of accessing a texture, you could perform a
+            computation between that texture unit's coordinate and possibly the coordinate from the
+            previous texture shader operation, if there was one.</p><p>It was not very flexible functionality. It did allow for full texture-space bump
+            mapping, though. While the 8 register combiners were enough to do a full matrix
+            multiply, they were not powerful enough to normalize the resulting vector. However, you
+            could normalize a vector by accessing a special cubemap. The values of this cubemap
+            represented a normalized vector in the direction of the cubemap's given texture
+            coordinate.</p><p>But using that required spending a total of 3 texture shader stages. Which meant you
+            get a bump map and a normalization cubemap only; there was no room for a diffuse map in
+            that pass. It also did not perform very well; the texture shader functions were quite
+            expensive.</p><p>True programmability came to the fragment shader from ATI, with the Radeon 8500,
+            released in late 2001.</p><p>The 8500's fragment shader architecture was pretty straightforward, and in terms of
+            programming, it is not too dissimilar to modern shader systems. Texture coordinates
+            would come in. They could either be used to fetch from a texture or be given directly as
+            inputs to the processing stage. Up to 6 textures could be used at once. Then, up to 8
+            opcodes, including a conditional operation, could be used. After that, the hardware
+            would repeat the process using registers written by the opcodes. Those registers could
+            feed texture accesses from the same group of textures used in the first pass. And then
+            another 8 opcodes would generate the output color.</p><p>It also had strong, but not full, swizzling support in the fragment shader. Register
+            combiners had very little support for swizzling.</p><p>This era of hardware was also the first to allow 3D textures. Though that was as much
+            a memory concern as anything else, since 3D textures take up lots of memory which was
+            not available on earlier cards. Depth comparison texturing was also made
+            available.</p><p>While the 8500 was a technological marvel, it was a flop in the market compared to the
+            GeForce 3 &amp; 4. Indeed, this is a recurring theme of these eras: the card with the
+            more programmable hardware often tends to lose in its first iteration.</p><div class="sidebar"><p class="title"><b>API Hell</b></p><p>This era is notable in what it did to graphics APIs. Consider the hardware
+                differences between the 8500 and the GeForce 3/4 in terms of fragment
+                processing.</p><p>On the Direct3D front, things were not the best. Direct3D 8 promised a unified
+                shader development pipeline. That is, you could write a shader according to their
+                specifications and it would work on any D3D 8 hardware. And this was effectively
+                true. For vertex shaders, at least.</p><p>However, the D3D 8.0 pixel shader pipeline was nothing more than NVIDIA's register
+                combiners and texture shaders. There was no real abstraction of capabilities; the
+                D3D 8.0 pixel shaders simply took NVIDIA's hardware and made a shader language out
+                of it.</p><p>To provide support for the 8500's expanded fragment processing feature-set, there
+                was D3D 8.1. This version altered the pixel shader pipeline to match the
+                capabilities of the Radeon 8500. Fortunately, the 8500 would accept 8.0 shaders just
+                fine, since it was capable of doing everything the GeForce 3 could do. But no one
+                would mistake either shader specification for any kind of real abstraction.</p><p>Things were much worse on the OpenGL front. At least in D3D, you used the same
+                basic C++ API to provide shaders; the shaders themselves may have been different,
+                but the base API was the same. Not so in OpenGL land.</p><p>NVIDIA and ATI released entirely separate proprietary extensions for specifying
+                fragment shaders. NVIDIA's extensions built on the register combiner extension they
+                released with the GeForce 256. They were completely incompatible. And worse, they
+                were not even string-based.</p><p>Imagine having to call a C++ function to write every opcode of a shader. Now
+                imagine having to call <span class="emphasis"><em>three</em></span> functions to write each opcode.
+                That's what using those APIs was like.</p><p>Things were better on vertex shaders. NVIDIA initially released a vertex shader
+                extension, as did ATI. NVIDIA's was string-based, but ATI's version was like their
+                fragment shader. Fortunately, this state of affairs did not last long; the OpenGL
+                ARB came along with their own vertex shader extension. This was not GLSL, but an
+                assembly like language based on NVIDIA's extension.</p><p>It would take much longer for the fragment shader disparity to be worked
+                out.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="History GeForce.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="History of Graphics Hardware.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="History GeForceFX.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Vertices and Registers&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Dependency</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:11 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:08:55 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

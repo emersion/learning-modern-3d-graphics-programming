@@ -1,0 +1,264 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app0.us.archive.org";archive_analytics.values.server_ms=778;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Interpolation</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 10.html" title="Chapter&nbsp;10.&nbsp;Plane Lights"><link rel="prev" href="Tutorial 10.html" title="Chapter&nbsp;10.&nbsp;Plane Lights"><link rel="next" href="Tut10 Fragment Lighting.html" title="Fragment Lighting"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Illumination/Tut10%20Interpolation.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Illumination/Tut10%20Interpolation.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192609" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813170536/http://www.arcsynthesis.org/gltut/Illumination/Tut10%20Interpolation.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:09 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813170536/http://www.arcsynthesis.org/gltut/Illumination/Tut10%20Interpolation.html" title="17:05:36 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:09 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205013813/http://www.arcsynthesis.org/gltut/Illumination/Tut10%20Interpolation.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:09 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192609*/http://www.arcsynthesis.org/gltut/Illumination/Tut10%20Interpolation.html" title="See a list of every capture for this URL">29 captures</a>
+           <div class="r" title="Timespan for captures of this URL">3 Jun 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000001111020_2012:-1:201120000020_2013:-1:112011110211_2014:-1:000100010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Interpolation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tutorial 10.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;10.&nbsp;Plane Lights</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut10 Fragment Lighting.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e9930"></a>Interpolation</h2></div></div></div><p>As you can see, doing point lighting is quite simple. Unfortunately, the visual
+            results are not.</p><p>For example, use the controls to display the position of the point light source, then
+            position it near the ground plane. See anything wrong?</p><p>If everything were working correctly, one would expect to see a bright area directly
+            under the light. After all, geometrically, this situation looks like this:</p><div class="figure"><a name="d0e9940"></a><p class="title"><b>Figure&nbsp;10.2.&nbsp;Light Near Surface</b></p><div class="figure-contents"><div class="mediaobject"><img src="LightNearSurface.svg" alt="Light Near Surface"></div></div></div><br class="figure-break"><p>The surface normal for the areas directly under the light are almost the same as the
+            direction towards the light. This means that the angle of incidence is small, so the
+            cosine of this angle is close to 1. That should translate to having a bright area under
+            the light, but darker areas farther away. What we see is nothing of the sort. Why is
+            that?</p><p>Well, consider what we are doing. We are computing the lighting at every triangle's
+                <span class="emphasis"><em>vertex</em></span>, and then interpolating the results across the surface
+            of the triangle. The ground plane is made up of precisely four vertices: the four
+            corners. And those are all very far from the light position and have a very large angle
+            of incidence. Since none of them have a small angle of incidence, none of the colors
+            that are interpolated across the surface are bright.</p><p>You can see this is evident by putting the light position next to the cylinder. If the
+            light is at the top or bottom of the cylinder, then the area near the light will be
+            bright. But if you move the light to the middle of the cylinder, far the top or bottom
+            vertices, then the illumination will be much dimmer.</p><p>This is not the only problem with doing per-vertex lighting. For example, run the
+            tutorial again and do not move the light. Just watch how the light behaves on the
+            cylinder's surface as it animates around. Unlike with directional lighting, you can very
+            easily see the triangles on the cylinder's surface. Though the per-vertex computations
+            are not helping matters, the main problem here has to do with interpolating the
+            values.</p><p>If you move the light source farther away, you can see that the triangles smooth out
+            and become indistinct from one another. But this is simply because, if the light source
+            is far enough away, the results are indistinguishable from a directional light. Each
+            vertex's direction to the light is almost the same as each other vertex's direction to
+            the light.</p><p>Per-vertex lighting was reasonable when dealing with directional lights. But it simply
+            is not a good idea for point lighting. The question arises: why was per-vertex lighting
+            good with directional lights to begin with?</p><p>Remember that our diffuse lighting equation has two parameters: the direction to the
+            light and the surface normal. In directional lighting, the direction to the light is
+            always the same. Therefore, the only value that changes over a triangle's surface is the
+            surface normal.</p><p>Linear interpolation of vectors looks like this:</p><div class="informalequation"><div class="mediaobject"><img src="StandardLerp_1.svg"></div></div><p>The &#945; in the equation is the factor of interpolation between the two values. When &#945; is
+            one, we get V<sub>a</sub>, and when it is zero, we get
+                V<sub>b</sub>. The two values, V<sub>a</sub> and
+                V<sub>b</sub> can be scalars or vectors.</p><p>Our diffuse lighting equation is this:</p><div class="informalequation"><div class="mediaobject"><img src="DiffuseLightEq_2.svg"></div></div><p>If the surface normal N is being interpolated, then at any particular point on the
+            surface, we get this equation for a directional light (the light direction L does not
+            change):</p><div class="informalequation"><div class="mediaobject"><img src="LerpDiffuse_3.svg"></div></div><p>The dot product is distributive, like scalar multiplication. So we can distribute the
+            L to both sides of the dot product term:</p><div class="informalequation"><div class="mediaobject"><img src="LerpDiffuse_4.svg"></div></div><p>We can extract the linear terms from the dot product. Remember that the dot product is
+            the cosine of the angle between two vectors, times the length of those vectors. The two
+            scaling terms directly modify the length of the vectors. So they can be pulled out to
+            give us:</p><div class="informalequation"><div class="mediaobject"><img src="LerpDiffuse_5.svg"></div></div><p>Recall that vector/scalar multiplication is distributive. We can distribute the
+            multiplication by the diffuse color and light intensity to both terms. This gives
+            us:</p><div class="informalequation"><div class="mediaobject"><img src="LerpDiffuse_6.svg"></div></div><p>This means that if L is constant, linearly interpolating N is exactly equivalent to
+            linearly interpolating the results of the lighting equation. And the addition of the
+            ambient term does not change this, since it is a constant and would not be affected by
+            linear interpolation.</p><p>When doing point lighting, you would have to interpolate both N and L. And that does
+            not yield the same results as linearly interpolating the two colors you get from the
+            lighting equation. This is a big part of the reason why the cylinder does not look
+            correct.</p><p>The more physically correct method of lighting is to perform lighting at every rendered
+            pixel. To do that, we would have to interpolate the lighting parameters across the
+            triangle, and perform the lighting computation in the fragment shader.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tutorial 10.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 10.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut10 Fragment Lighting.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;10.&nbsp;Plane Lights&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192609/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Fragment Lighting</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:09 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:20 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

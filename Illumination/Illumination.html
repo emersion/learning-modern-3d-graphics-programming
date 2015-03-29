@@ -1,0 +1,229 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app14.us.archive.org";archive_analytics.values.server_ms=142;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Part&nbsp;III.&nbsp;Illumination</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="prev" href="../Positioning/Tut08 Glossary.html" title="Glossary"><link rel="next" href="Tutorial 09.html" title="Chapter&nbsp;9.&nbsp;Lights On"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Illumination/Illumination.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Illumination/Illumination.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192607" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813165249/http://www.arcsynthesis.org/gltut/Illumination/Illumination.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:07 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20150216201528/http://www.arcsynthesis.org/gltut/Illumination/Illumination.html" title="20:15:28 Feb 16, 2015"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:07 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205181920/http://www.arcsynthesis.org/gltut/Illumination/Illumination.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:07 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192607*/http://www.arcsynthesis.org/gltut/Illumination/Illumination.html" title="See a list of every capture for this URL">39 captures</a>
+           <div class="r" title="Timespan for captures of this URL">23 Jan 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:100010211121_2012:-1:200121000130_2013:-1:112112111211_2014:-1:000100010000_2015:1:020000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Part&nbsp;III.&nbsp;Illumination</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="/web/20150225192607/http://www.arcsynthesis.org/gltut/Positioning/Tut08%20Glossary.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tutorial 09.html">Next</a></td></tr></table><hr></div><div class="part"><div class="titlepage"><div><div><h1 class="title"><a name="d0e8831"></a>Part&nbsp;III.&nbsp;Illumination</h1></div></div></div><div class="partintro"><div></div><p>One of the most important aspects of rendering is lighting. Thus far, all of our
+            objects have had a color that is entirely part of the mesh data, pulled from a
+            uniform variable, or computed in an arbitrary way. This makes all of our objects
+            look very flat and unrealistic.</p><p>Properly modeling the interaction between light and a surface is vital in creating a
+            convincing world. Lighting defines how we see and understand shapes to a large degree.
+            The lack of lighting is the reason why the objects we have used thus far look fairly
+            flat. A curved surface appears curved to us because of how the light plays over the
+            surface. The same goes for a flat surface.</p><p>Without this visual hinting, surfaces appear flat even when they are modeled with many
+            triangles and yield a seemingly-curved polygonal mesh. A proper lighting model makes
+            objects appear real. A poor or inconsistent lighting model shows the virtual world to be
+            the forgery that it is.</p><p>This section of the book will cover lighting, using a variety of light/surface
+            modelling techniques. It will cover dynamic range and linear colorspaces in lighting
+            equations. Also, it will cover techniques to use lighting to produce entirely fake
+            surfaces.</p><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="Tutorial 09.html">9. Lights On</a></span></dt><dd><dl><dt><span class="section"><a href="Tutorial 09.html#d0e8853">Modelling Lights</a></span></dt><dt><span class="section"><a href="Tut09 Normal Transformation.html">Normal Transformation</a></span></dt><dt><span class="section"><a href="Tut09 Global Illumination.html">Global Illumination</a></span></dt><dt><span class="section"><a href="Tut09 Mesh Topology.html">Mesh Topology</a></span></dt><dt><span class="section"><a href="Tut09 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut09 Glossary.html">Glossary</a></span></dt></dl></dd><dt><span class="chapter"><a href="Tutorial 10.html">10. Plane Lights</a></span></dt><dd><dl><dt><span class="section"><a href="Tutorial 10.html#d0e9855">Vertex Point Lighting</a></span></dt><dt><span class="section"><a href="Tut10 Interpolation.html">Interpolation</a></span></dt><dt><span class="section"><a href="Tut10 Fragment Lighting.html">Fragment Lighting</a></span></dt><dt><span class="section"><a href="Tut10 Distant Points of Light.html">Distant Points of Light</a></span></dt><dt><span class="section"><a href="Tut10 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut10 Glossary.html">Glossary</a></span></dt></dl></dd><dt><span class="chapter"><a href="Tutorial 11.html">11. Shinies</a></span></dt><dd><dl><dt><span class="section"><a href="Tutorial 11.html#d0e10806">Microfacets</a></span></dt><dt><span class="section"><a href="Tut11 Phong Model.html">Phong Model</a></span></dt><dt><span class="section"><a href="Tut11 BlinnPhong Model.html">Blinn-Phong Model</a></span></dt><dt><span class="section"><a href="Tut11 Gaussian.html">Gaussian</a></span></dt><dt><span class="section"><a href="Tut11 On Performance.html">On Performance</a></span></dt><dt><span class="section"><a href="Tut11 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut11 Glossary.html">Glossary</a></span></dt></dl></dd><dt><span class="chapter"><a href="Tutorial 12.html">12. Dynamic Range</a></span></dt><dd><dl><dt><span class="section"><a href="Tutorial 12.html#d0e11614">Setting the Scene</a></span></dt><dt><span class="section"><a href="Tut12 High Dynamic Range.html">High Dynamic Range</a></span></dt><dt><span class="section"><a href="Tut12 Monitors and Gamma.html">Linearity and Gamma</a></span></dt><dt><span class="section"><a href="Tut12 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut12 Glossary.html">Glossary</a></span></dt></dl></dd><dt><span class="chapter"><a href="Tutorial 13.html">13. Lies and Impostors</a></span></dt><dd><dl><dt><span class="section"><a href="Tutorial 13.html#d0e12541">Simple Sham</a></span></dt><dt><span class="section"><a href="Tut13 Correct Chicanery.html">Correct Chicanery</a></span></dt><dt><span class="section"><a href="Tut13 Deceit in Depth.html">Deceit in Depth</a></span></dt><dt><span class="section"><a href="Tut13 Purloined Primitives.html">Purloined Primitives</a></span></dt><dt><span class="section"><a href="Tut13 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut13 Glossary.html">Glossary</a></span></dt></dl></dd></dl></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="/web/20150225192607/http://www.arcsynthesis.org/gltut/Positioning/Tut08%20Glossary.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tutorial 09.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Glossary&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192607/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;9.&nbsp;Lights On</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:07 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:08:38 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

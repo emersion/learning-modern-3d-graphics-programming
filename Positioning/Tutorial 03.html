@@ -1,0 +1,318 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app17.us.archive.org";archive_analytics.values.server_ms=134;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Chapter&nbsp;3.&nbsp;OpenGL's Moving Triangle</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Positioning.html" title="Part&nbsp;II.&nbsp;Positioning"><link rel="prev" href="Positioning.html" title="Part&nbsp;II.&nbsp;Positioning"><link rel="next" href="Tut03 A Better Way.html" title="A Better Way"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2003.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2003.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192607" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813145729/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2003.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:07 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813145729/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2003.html" title="14:57:29 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:07 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205195730/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2003.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:07 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192607*/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2003.html" title="See a list of every capture for this URL">46 captures</a>
+           <div class="r" title="Timespan for captures of this URL">2 Jan 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:200000111121_2012:-1:211121111130_2013:-1:112112112311_2014:-1:000102010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;3.&nbsp;OpenGL's Moving Triangle</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Positioning.html">Prev</a>&nbsp;</td><th width="60%" align="center">Part&nbsp;II.&nbsp;Positioning</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut03 A Better Way.html">Next</a></td></tr></table><hr></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e2821"></a>Chapter&nbsp;3.&nbsp;OpenGL's Moving Triangle</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="Tutorial 03.html#d0e2827">Moving the Vertices</a></span></dt><dt><span class="section"><a href="Tut03 A Better Way.html">A Better Way</a></span></dt><dt><span class="section"><a href="Tut03 More Power To The Shaders.html">More Power to the Shaders</a></span></dt><dt><span class="section"><a href="Tut03 Multiple Shaders.html">Multiple Shaders</a></span></dt><dt><span class="section"><a href="Tut03 On Vertex Shader Performance.html">On Vertex Shader Performance</a></span></dt><dt><span class="section"><a href="Tut03 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut03 Glossary.html">Glossary</a></span></dt></dl></div><p>This tutorial is about how to move objects around. It will introduce new shader
+        techniques.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e2827"></a>Moving the Vertices</h2></div></div></div><p>The simplest way one might think to move a triangle or other object around is to
+            simply modify the vertex position data directly. From previous tutorials, we learned
+            that the vertex data is stored in a buffer object. So the task is to modify the vertex
+            data in the buffer object. This is what <code class="filename">cpuPositionOffset.cpp</code>
+            does.</p><p>The modifications are done in two steps. The first step is to generate the X, Y offset
+            that will be applied to each position. The second is to apply that offset to each vertex
+            position. The generation of the offset is done with the
+                <code class="function">ComputePositionOffset</code> function:</p><div class="example"><a name="d0e2840"></a><p class="title"><b>Example&nbsp;3.1.&nbsp;Computation of Position Offsets</b></p><div class="example-contents"><pre class="programlisting"><span class="code-keyword">void</span> ComputePositionOffsets(<span class="code-keyword">float</span> &amp;fXOffset, <span class="code-keyword">float</span> &amp;fYOffset)
+{
+    <span class="code-keyword">const</span> <span class="code-keyword">float</span> fLoopDuration = <span class="code-number">5.0f</span>;
+    <span class="code-keyword">const</span> <span class="code-keyword">float</span> fScale = <span class="code-number">3.14159f</span> * <span class="code-number">2.0f</span> / fLoopDuration;
+    
+    <span class="code-keyword">float</span> fElapsedTime = glutGet(GLUT_ELAPSED_TIME) / <span class="code-number">1000.0f</span>;
+    
+    <span class="code-keyword">float</span> fCurrTimeThroughLoop = fmodf(fElapsedTime, fLoopDuration);
+    
+    fXOffset = cosf(fCurrTimeThroughLoop * fScale) * <span class="code-number">0.5f</span>;
+    fYOffset = sinf(fCurrTimeThroughLoop * fScale) * <span class="code-number">0.5f</span>;
+}</pre></div></div><br class="example-break"><p>This function computes offsets in a loop. The offsets produce circular motion, and the
+            offsets will reach the beginning of the circle every 5 seconds (controlled by
+                <code class="varname">fLoopDuration</code>). The function
+                <code class="function">glutGet(GLUT_ELAPSED_TIME)</code> retrieves the integer time in
+            milliseconds since the application started. The <code class="function">fmodf</code> function
+            computes the floating-point modulus of the time. In lay terms, it takes the first
+            parameter and returns the remainder of the division between that and the second
+            parameter. Thus, it returns a value on the range [0, <code class="varname">fLoopDuration</code>),
+            which is what we need to create a periodically repeating pattern.</p><p>The <code class="function">cosf</code> and <code class="function">sinf</code> functions compute the
+            cosine and sine respectively. It is not important to know exactly how these functions
+            work, but they effectively compute a circle of diameter 2. By multiplying by 0.5f, it
+            shrinks the circle down to a circle with a diameter of 1.</p><p>Once the offsets are computed, the offsets have to be added to the vertex data. This
+            is done with the <code class="function">AdjustVertexData</code> function:</p><div class="example"><a name="d0e2872"></a><p class="title"><b>Example&nbsp;3.2.&nbsp;Adjusting the Vertex Data</b></p><div class="example-contents"><pre class="programlisting"><span class="code-keyword">void</span> AdjustVertexData(<span class="code-keyword">float</span> fXOffset, <span class="code-keyword">float</span> fYOffset)
+{
+    std::vector&lt;<span class="code-keyword">float</span>&gt; fNewData(ARRAY_COUNT(vertexPositions));
+    memcpy(&amp;fNewData[<span class="code-number">0</span>], vertexPositions, <span class="code-keyword">sizeof</span>(vertexPositions));
+    
+    <span class="code-keyword">for</span>(<span class="code-keyword">int</span> iVertex = <span class="code-number">0</span>; iVertex &lt; ARRAY_COUNT(vertexPositions); iVertex += <span class="code-number">4</span>)
+    {
+        fNewData[iVertex] += fXOffset;
+        fNewData[iVertex + <span class="code-number">1</span>] += fYOffset;
+    }
+    
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferObject);
+    glBufferSubData(GL_ARRAY_BUFFER, <span class="code-number">0</span>, <span class="code-keyword">sizeof</span>(vertexPositions), &amp;fNewData[<span class="code-number">0</span>]);
+    glBindBuffer(GL_ARRAY_BUFFER, <span class="code-number">0</span>);
+}</pre></div></div><br class="example-break"><p>This function works by copying the vertex data into a std::vector, then applying the
+            offset to the X and Y coordinates of each vertex. The last three lines are the
+            OpenGL-relevant parts.</p><p>First, the buffer objects containing the positions is bound to the context. Then the
+            new function <code class="function">glBufferSubData</code> is called to transfer this data to the
+            buffer object.</p><p>The difference between <code class="function">glBufferData</code> and
+                <code class="function">glBufferSubData</code> is that the SubData function does not
+                <span class="emphasis"><em>allocate</em></span> memory. <code class="function">glBufferData</code> specifically
+            allocates memory of a certain size; <code class="function">glBufferSubData</code> only transfers
+            data to the already existing memory. Calling <code class="function">glBufferData</code> on a
+            buffer object that has already been allocated tells OpenGL to
+                <span class="emphasis"><em>reallocate</em></span> this memory, throwing away the previous data and
+            allocating a fresh block of memory. Whereas calling <code class="function">glBufferSubData</code>
+            on a buffer object that has not yet had memory allocated by
+                <code class="function">glBufferData</code> is an error.</p><p>Think of <code class="function">glBufferData</code> as a combination of
+                <code class="function">malloc</code> and <code class="function">memcpy</code>, while glBufferSubData
+            is just <code class="function">memcpy</code>.</p><p>The <code class="function">glBufferSubData</code> function can update only a portion of the
+            buffer object's memory. The second parameter to the function is the byte offset into the
+            buffer object to begin copying to, and the third parameter is the number of bytes to
+            copy. The fourth parameter is our array of bytes to be copied into that location of the
+            buffer object.</p><p>The last line of the function is simply unbinding the buffer object. It is not
+            strictly necessary, but it is good form to clean up binds after making them.</p><p><b>Buffer Object Usage Hints.&nbsp;</b>Every time we draw something, we are changing the buffer object's data. OpenGL has
+                a way to tell it that you will be doing something like this, and it is the purpose
+                of the last parameter of <code class="function">glBufferData</code>. This tutorial changed
+                the allocation of the buffer object slightly, replacing:</p><pre class="programlisting">glBufferData(GL_ARRAY_BUFFER, <span class="code-keyword">sizeof</span>(vertexPositions), vertexPositions, GL_STATIC_DRAW);</pre><p>with this:</p><pre class="programlisting">glBufferData(GL_ARRAY_BUFFER, <span class="code-keyword">sizeof</span>(vertexPositions), vertexPositions, GL_STREAM_DRAW);</pre><p><code class="literal">GL_STATIC_DRAW</code> tells OpenGL that you intend to only set the data in
+            this buffer object once. <code class="literal">GL_STREAM_DRAW</code> tells OpenGL that you intend
+            to set this data constantly, generally once per frame. These parameters do not mean
+                <span class="emphasis"><em>anything</em></span> with regard to the API; they are simply hints to the
+            OpenGL implementation. Proper use of these hints can be crucial for getting good buffer
+            object performance when making frequent changes. We will see more of these hints
+            later.</p><p>The rendering function now has become this:</p><div class="example"><a name="d0e2960"></a><p class="title"><b>Example&nbsp;3.3.&nbsp;Updating and Drawing the Vertex Data</b></p><div class="example-contents"><pre class="programlisting"><span class="code-keyword">void</span> display()
+{
+    <span class="code-keyword">float</span> fXOffset = <span class="code-number">0.0f</span>, fYOffset = <span class="code-number">0.0f</span>;
+    ComputePositionOffsets(fXOffset, fYOffset);
+    AdjustVertexData(fXOffset, fYOffset);
+    
+    glClearColor(<span class="code-number">0.0f</span>, <span class="code-number">0.0f</span>, <span class="code-number">0.0f</span>, <span class="code-number">0.0f</span>);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    glUseProgram(theProgram);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferObject);
+    glEnableVertexAttribArray(<span class="code-number">0</span>);
+    glVertexAttribPointer(<span class="code-number">0</span>, <span class="code-number">4</span>, GL_FLOAT, GL_FALSE, <span class="code-number">0</span>, <span class="code-number">0</span>);
+    
+    glDrawArrays(GL_TRIANGLES, <span class="code-number">0</span>, <span class="code-number">3</span>);
+    
+    glDisableVertexAttribArray(<span class="code-number">0</span>);
+    glUseProgram(<span class="code-number">0</span>);
+    
+    glutSwapBuffers();
+    glutPostRedisplay();
+}</pre></div></div><br class="example-break"><p>The first three lines get the offset and set the vertex data. Everything but the last
+            line is unchanged from the first tutorial. The last line of the function is there to
+            tell FreeGLUT to constantly call <code class="function">display</code>. Ordinarily,
+                <code class="function">display</code> would only be called when the window's size changes or
+            when the window is uncovered. <code class="function">glutPostRedisplay</code> causes FreeGLUT to
+            call <code class="function">display</code> again. Not immediately, but reasonably fast.</p><p>If you run the tutorial, you will see a smaller triangle (the size was reduced in this
+            tutorial) that slides around in a circle.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Positioning.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Positioning.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut03 A Better Way.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Part&nbsp;II.&nbsp;Positioning&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192607/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;A Better Way</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:07 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:08:31 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

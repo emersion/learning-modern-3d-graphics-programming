@@ -1,0 +1,316 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app4.us.archive.org";archive_analytics.values.server_ms=71;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Translation</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 06.html" title="Chapter&nbsp;6.&nbsp;Objects in Motion"><link rel="prev" href="Tutorial 06.html" title="Chapter&nbsp;6.&nbsp;Objects in Motion"><link rel="next" href="Tut06 Scale.html" title="Scale"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Translation.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Translation.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192611" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813160508/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Translation.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:11 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813160508/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Translation.html" title="16:05:08 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:11 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205012644/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Translation.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:11 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192611*/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Translation.html" title="See a list of every capture for this URL">38 captures</a>
+           <div class="r" title="Timespan for captures of this URL">23 Jan 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:100020111031_2012:-1:211020000021_2013:-1:112111210211_2014:-1:000102010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Translation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tutorial 06.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;6.&nbsp;Objects in Motion</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut06 Scale.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e6046"></a>Translation</h2></div></div></div><p>The simplest space transformation operation is translation. Indeed, we have not only
+            seen this transform before, it has been used in all of the tutorials with a perspective
+            projection. Recall this line from the vertex shaders:</p><pre class="programlisting"><span class="code-type">vec4</span> cameraPos = position + <span class="code-type">vec4</span>(offset.x, offset.y, <span class="code-number">0.0</span>, <span class="code-number">0.0</span>);</pre><p>This is a <em class="glossterm">translation</em> transformation: it is used to position
+            the origin point of the initial space relative to the destination space. Since all of
+            the coordinates in a space are relative to the origin point of that space, all a
+            translation needs to do is add a vector to all of the coordinates in that space. The
+            vector added to these values is the location of where the user wants the origin point
+            relative to the destination coordinate system.</p><div class="figure"><a name="d0e6059"></a><p class="title"><b>Figure&nbsp;6.2.&nbsp;Coordinate System Translation in 2D</b></p><div class="figure-contents"><div class="mediaobject"><img src="TranslationTransform.svg" alt="Coordinate System Translation in 2D"></div></div></div><br class="figure-break"><p>Here is a more concrete example. Let us say that an object which in its model space is
+            near its origin. This means that, if we want to see that object in front of the camera,
+            we must position the origin of the model in front of the camera. If the extent of the
+            model is only [-1, 1] in model space, we can ensure that the object is visible by adding
+            this vector to all of the model space coordinates: (0, 0, -3). This puts the origin of
+            the model at that position in camera space.</p><p>Translation is ultimately just that simple. So let's make it needlessly complex. And
+            the best tool for doing that: matrices. Oh, we could just use a 3D uniform vector to
+            pass an offset to do the transformation. But matrices have hidden benefits we will
+            explore very soon.</p><p>All of our position vectors are 4D vectors, with a final W coordinate that is always
+            1.0. In <a class="link" href="Tut04 The Matrix Has You.html" title="The Matrix has You">Tutorial 04,</a> we took advantage of this with
+            our perspective transformation matrix. The equation for the Z coordinate needed an
+            additive term, so we put that term in the W column of the transformation matrix. Matrix
+            multiplication causes the value in the W column to be multiplied by the W coordinate of
+            the vector (which is 1) and added to the sum of the other terms.</p><p>But how do we keep the matrix from doing something to the other terms? We only want
+            this matrix to apply an offset to the position. We do not want to have it modify the
+            position in some other way.</p><p>This is done by modifying an <em class="glossterm">identity matrix.</em> An identity
+            matrix is a matrix that, when performing matrix multiplication, will return the matrix
+            (or vector) it was multiplied with. It is sort of like the number 1 with regular
+            multiplication: 1*X = X. The 4x4 identity matrix looks like this:</p><div class="equation"><a name="d0e6081"></a><p class="title"><b>Equation&nbsp;6.2.&nbsp;Identity Matrix</b></p><div class="equation-contents"><div class="mediaobject"><img src="IdentityMatrix.svg"></div></div></div><br class="equation-break"><p>To modify the identity matrix into one that is suitable for translation, we simply put
+            the offset into the W column of the identity matrix.</p><div class="equation"><a name="d0e6089"></a><p class="title"><b>Equation&nbsp;6.3.&nbsp;Translation Matrix</b></p><div class="equation-contents"><div class="mediaobject"><img src="TranslationMatrix.svg"></div></div></div><br class="equation-break"><p>The tutorial project cleverly titled <span class="propername">Translation</span>
+            performs translation operations.</p><p>This tutorial renders 3 of the same object, all in different positions. One of the
+            objects is positioned in the center of the screen, and the other two's positions orbit
+            it at various speeds.</p><p>Because of the prevalence of matrix math, this is the first tutorial that uses the GLM
+            math library. So let's take a look at the shader program initialization code to see it
+            in action.</p><div class="example"><a name="d0e6104"></a><p class="title"><b>Example&nbsp;6.1.&nbsp;Translation Shader Initialization</b></p><div class="example-contents"><pre class="programlisting"><span class="code-keyword">void</span> InitializeProgram()
+{
+    std::vector&lt;GLuint&gt; shaderList;
+    
+    shaderList.push_back(Framework::LoadShader(GL_VERTEX_SHADER,
+        <span class="code-string">"PosColorLocalTransform.vert"</span>));
+    shaderList.push_back(Framework::LoadShader(GL_FRAGMENT_SHADER,
+        <span class="code-string">"ColorPassthrough.frag"</span>));
+    
+    theProgram = Framework::CreateProgram(shaderList);
+    
+    positionAttrib = glGetAttribLocation(theProgram, <span class="code-string">"position"</span>);
+    colorAttrib = glGetAttribLocation(theProgram, <span class="code-string">"color"</span>);
+    
+    modelToCameraMatrixUnif = glGetUniformLocation(theProgram,
+        <span class="code-string">"modelToCameraMatrix"</span>);
+    cameraToClipMatrixUnif = glGetUniformLocation(theProgram,
+        <span class="code-string">"cameraToClipMatrix"</span>);
+    
+    <span class="code-keyword">float</span> fzNear = <span class="code-number">1.0f</span>; <span class="code-keyword">float</span> fzFar = <span class="code-number">45.0f</span>;
+    
+    cameraToClipMatrix[<span class="code-number">0</span>].x = fFrustumScale;
+    cameraToClipMatrix[<span class="code-number">1</span>].y = fFrustumScale;
+    cameraToClipMatrix[<span class="code-number">2</span>].z = (fzFar + fzNear) / (fzNear - fzFar);
+    cameraToClipMatrix[<span class="code-number">2</span>].w = -<span class="code-number">1.0f</span>;
+    cameraToClipMatrix[<span class="code-number">3</span>].z = (<span class="code-number">2</span> * fzFar * fzNear) / (fzNear - fzFar);
+    
+    glUseProgram(theProgram);
+    glUniformMatrix4fv(cameraToClipMatrixUnif, <span class="code-number">1</span>, GL_FALSE,
+        glm::value_ptr(cameraToClipMatrix));
+    glUseProgram(<span class="code-number">0</span>);
+}</pre></div></div><br class="example-break"><p>GLM takes a unique approach for a vector/matrix math library. It attempts to emulate
+            GLSL's approach to vector operations where possible. It uses C++ operator overloading to
+            effectively emulate GLSL. In many cases, GLM-based expressions would compile in
+            GLSL.</p><p>The matrix <code class="varname">cameraToClipMatrix</code> is defined as a
+                <span class="type">glm::mat4</span>, which has the same properties as a GLSL <span class="type">mat4.</span>
+            Array indexing of a <span class="type">mat4</span>, whether GLM or GLSL, returns the zero-based
+                <span class="emphasis"><em>column</em></span> of the matrix as a <span class="type">vec4</span>.</p><p>The <code class="function">glm::value_ptr</code> function is used to get a direct pointer to
+            the matrix data, in column-major order. This is useful for uploading data to OpenGL, as
+            shown with the call to <code class="function">glUniformMatrix4fv</code>.</p><p>With the exception of getting a second uniform location (for our model transformation
+            matrix), this code functions exactly as it did in previous tutorials.</p><p>There is one important note: <code class="varname">fFrustumScale</code> is not 1.0 anymore.
+            Until now, the relative sizes of objects were not particularly meaningful. Now that we
+            are starting to deal with more complex objects that have a particular scale, picking a
+            proper field of view for the perspective projection is very important.</p><p>The new <code class="varname">fFrustumScale</code> is computed with this code:</p><div class="example"><a name="d0e6151"></a><p class="title"><b>Example&nbsp;6.2.&nbsp;Frustum Scale Computation</b></p><div class="example-contents"><pre class="programlisting"><span class="code-keyword">float</span> CalcFrustumScale(<span class="code-keyword">float</span> fFovDeg)
+{
+    <span class="code-keyword">const</span> <span class="code-keyword">float</span> degToRad = <span class="code-number">3.14159f</span> * <span class="code-number">2.0f</span> / <span class="code-number">360.0f</span>;
+    <span class="code-keyword">float</span> fFovRad = fFovDeg * degToRad;
+    <span class="code-keyword">return</span> <span class="code-number">1.0f</span> / tan(fFovRad / <span class="code-number">2.0f</span>);
+}
+
+<span class="code-keyword">const</span> <span class="code-keyword">float</span> fFrustumScale = CalcFrustumScale(<span class="code-number">45.0f</span>);</pre></div></div><br class="example-break"><p>The function <code class="function">CalcFrustumScale</code> computes the frustum scale based on
+            a field-of-view angle in degrees. The field of view in this case is the angle between
+            the forward direction and the direction of the farmost-extent of the view.</p><p>This project, and many of the others in this tutorial, uses a fairly complex bit of
+            code to manage the transform matrices for the various object instances. There is an
+                <code class="classname">Instance</code> object for each actual object; it has a function
+            pointer that is used to compute the object's offset position. The
+                <code class="classname">Instance</code> object then takes that position and computes a
+            transformation matrix, based on the current elapsed time, with this function:</p><div class="example"><a name="d0e6169"></a><p class="title"><b>Example&nbsp;6.3.&nbsp;Translation Matrix Generation</b></p><div class="example-contents"><pre class="programlisting">glm::mat4 ConstructMatrix(<span class="code-keyword">float</span> fElapsedTime)
+{
+    glm::mat4 theMat(<span class="code-number">1.0f</span>);
+    
+    theMat[<span class="code-number">3</span>] = glm::vec4(CalcOffset(fElapsedTime), <span class="code-number">1.0f</span>);
+    
+    <span class="code-keyword">return</span> theMat;
+}</pre></div></div><br class="example-break"><p>The <span class="type">glm::mat4</span> constructor that takes only a single value constructs what
+            is known as a diagonal matrix. That is a matrix with all zeros except for along the
+            diagonal from the upper-left to the lower-right. The values along that diagonal will be
+            the value passed to the constructor. An identity matrix is just a diagonal matrix with 1
+            as the value along the diagonal.</p><p>This function simply replaces the W column of that identity matrix with the offset
+            value.</p><p>This all produces the following:</p><div class="figure"><a name="d0e6183"></a><p class="title"><b>Figure&nbsp;6.3.&nbsp;Translation Project</b></p><div class="figure-contents"><div class="mediaobject"><img src="Translations.png" alt="Translation Project"></div></div></div><br class="figure-break"></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tutorial 06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut06 Scale.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;6.&nbsp;Objects in Motion&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192611/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Scale</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:11 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:09 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

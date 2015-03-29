@@ -1,0 +1,334 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app17.us.archive.org";archive_analytics.values.server_ms=310;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>The Matrix has You</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 04.html" title="Chapter&nbsp;4.&nbsp;Objects at Rest"><link rel="prev" href="Tut04 Perspective Projection.html" title="Perspective Projection"><link rel="next" href="Tut04 Aspect of the World.html" title="Aspect of the World"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tut04%20The%20Matrix%20Has%20You.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tut04%20The%20Matrix%20Has%20You.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192605" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813152544/http://www.arcsynthesis.org/gltut/Positioning/Tut04%20The%20Matrix%20Has%20You.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:05 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813152544/http://www.arcsynthesis.org/gltut/Positioning/Tut04%20The%20Matrix%20Has%20You.html" title="15:25:44 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:05 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205021621/http://www.arcsynthesis.org/gltut/Positioning/Tut04%20The%20Matrix%20Has%20You.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:05 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192605*/http://www.arcsynthesis.org/gltut/Positioning/Tut04%20The%20Matrix%20Has%20You.html" title="See a list of every capture for this URL">40 captures</a>
+           <div class="r" title="Timespan for captures of this URL">23 Jan 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:100100111131_2012:-1:111121100021_2013:-1:112111210211_2014:-1:000102010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">The Matrix has You</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tut04 Perspective Projection.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;4.&nbsp;Objects at Rest</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut04 Aspect of the World.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Tut04_matrix"></a>The Matrix has You</h2></div></div></div><p>So, now that we can put the world into perspective, let's do it the right way. The
+                <span class="quote">&#8220;<span class="quote">needlessly overcomplicated for the time being but will make sense in a few
+                tutorials</span>&#8221;</span> way.</p><p>First, let us look at the system of equations used to compute clip coordinates from
+            camera space. Given that <code class="literal">S</code> is the frustum scale factor,
+                <code class="literal">N</code> is the zNear and <code class="literal">F</code> is the zFar, we get the
+            following four equations.</p><div class="equation"><a name="d0e4251"></a><p class="title"><b>Equation&nbsp;4.3.&nbsp;Camera to Clip Equations</b></p><div class="equation-contents"><div class="mediaobject"><img src="CameraToClipPartial.svg"></div></div></div><br class="equation-break"><p>The odd spacing is intentional. For laughs, let's add a bunch of meaningless terms
+            that do not change the equation, but starts to develop an interesting pattern:</p><div class="equation"><a name="d0e4259"></a><p class="title"><b>Equation&nbsp;4.4.&nbsp;Camera to Clip Expanded Equations</b></p><div class="equation-contents"><div class="mediaobject"><img src="CameraToClipNearMatrix.svg"></div></div></div><br class="equation-break"><p>What we have here is what is known as a linear system of equations. The equations can
+            be specified as a series of coefficients (the numbers being multiplied by the XYZW
+            values) which are multiplied by the input values (XYZW) to produce the single output.
+            Each individual output value is a linear combination of all of the input values. In our
+            case, there just happen to be a lot of zero coefficients, so the output values in this
+            particular case only depend on a few input values.</p><p>You may be wondering at the multiplication of the additive term of
+                Z<sub>clip</sub>'s value by the camera space W. Well, our input camera
+            space position's W coordinate is always 1. So performing the multiplication is valid, so
+            long as this continues to be the case. Being able to do what we are about to do is part
+            of the reason why the W coordinate exists in our camera-space position values (the perspective divide is the other).</p><p>We can re-express any linear system of equations using a special kind of formulation.
+            You may recognize this reformulation, depending on your knowledge of linear
+            algebra:</p><div class="equation"><a name="d0e4274"></a><p class="title"><b>Equation&nbsp;4.5.&nbsp;Camera to Clip Matrix Transformation</b></p><div class="equation-contents"><div class="mediaobject"><img src="CameraToClipMatrix.svg"></div></div></div><br class="equation-break"><p>The two long vertical columns of XYZW labeled <span class="quote">&#8220;<span class="quote">clip</span>&#8221;</span> and
+                <span class="quote">&#8220;<span class="quote">camera</span>&#8221;</span> are 4-dimensional vectors; namely the clip and camera space
+            position vectors. The larger block of numbers is a matrix. You probably are not familiar
+            with matrix math. If not, it will be explained presently.</p><p>Generically speaking, a <em class="glossterm">matrix</em> is a two dimensional block of
+            numbers (matrices with more than 2 dimensions are called <span class="quote">&#8220;<span class="quote">tensors</span>&#8221;</span>).
+            Matrices are very common in computer graphics. Thus far, we have been able to get along
+            without them. As we get into more detailed object transformations however, we will rely
+            more and more on matrices to simplify matters.</p><p>In graphics work, we typically use 4x4 matrices; that is, matrices with 4 columns and
+            4 rows respectively. This is due to the nature of graphics work: most of the things that
+            we want to use matrices for are either 3 dimensional or 3 dimensional with an extra
+            coordinate of data. Our 4D positions are just 3D positions with a 1 added to the
+            end.</p><p>The operation depicted above is a vector-matrix multiplication. A matrix of dimension
+                <code class="literal">n</code>x<code class="literal">m</code> can only be multiplied by a vector of
+            dimension <code class="literal">n</code>. The result of such a multiplication is a vector of
+            dimension <code class="literal">m</code>. Since our matrix in this case is 4x4, it can only be
+            multiplied with a 4D vector and this multiplication will produce a 4D vector.</p><p>Matrix multiplication does what the expanded equation example does. For every row in
+            the matrix, the values of each component of the column are multiplied by the
+            corresponding values in the rows of the vector. These values are then added together;
+            that becomes the single value for the row of the output vector.</p><div class="equation"><a name="d0e4314"></a><p class="title"><b>Equation&nbsp;4.6.&nbsp;Vector Matrix Multiplication</b></p><div class="equation-contents"><div class="mediaobject"><img src="VectorMatrixMultiplication.svg"></div></div></div><br class="equation-break"><p>This results ultimately in performing 16 floating-point multiplications and 12
+            floating-point additions. That's quite a lot, particularly compared with our current
+            version. Fortunately, graphics hardware is designed to make these operations very fast.
+            Because each of the multiplications are independent of each other, they could all be
+            done simultaneously, which is exactly the kind of thing graphics hardware does fast.
+            Similarly, the addition operations are partially independent; each row's summation
+            does not depend on the values from any other row. Ultimately, vector-matrix
+            multiplication usually generates only 4 instructions in the GPU's machine
+            language.</p><p>We can re-implement the above perspective projection using matrix math rather than
+            explicit math. The <span class="propername">MatrixPerspective</span> tutorial does
+            this.</p><p>The vertex shader is much simpler in this case:</p><div class="example"><a name="d0e4329"></a><p class="title"><b>Example&nbsp;4.4.&nbsp;MatrixPerspective Vertex Shader</b></p><div class="example-contents"><pre class="programlisting">#version <span class="code-number">330</span>
+
+<span class="code-modifier">layout</span>(location = <span class="code-number">0</span>) <span class="code-modifier">in</span> <span class="code-type">vec4</span> position;
+<span class="code-modifier">layout</span>(location = <span class="code-number">1</span>) <span class="code-modifier">in</span> <span class="code-type">vec4</span> color;
+
+<span class="code-modifier">smooth</span> <span class="code-modifier">out</span> <span class="code-type">vec4</span> theColor;
+
+<span class="code-modifier">uniform</span> <span class="code-type">vec2</span> offset;
+<span class="code-modifier">uniform</span> <span class="code-type">mat4</span> perspectiveMatrix;
+
+<span class="code-type">void</span> main()
+{
+    <span class="code-type">vec4</span> cameraPos = position + <span class="code-type">vec4</span>(offset.x, offset.y, <span class="code-number">0.0</span>, <span class="code-number">0.0</span>);
+    
+    gl_Position = perspectiveMatrix * cameraPos;
+    theColor = color;
+}</pre></div></div><br class="example-break"><p>The OpenGL Shading Language (GLSL), being designed for graphics operations, naturally
+            has matrices as basic types. The <span class="type">mat4</span> is a 4x4 matrix (columns x rows).
+            GLSL has types for all combinations of columns and rows between 2 and 4. Square matrices
+            (matrices where the number of columns and rows are equal) only use one number, as in
+                <span class="type">mat4</span> above. So <span class="type">mat3</span> is a 3x3 matrix. If the matrix is not
+            square, GLSL uses notation like <span class="type">mat2x4</span>: a matrix with 2 columns and 4
+            rows.</p><p>Note that the shader no longer computes the values on its own; it is
+                <span class="emphasis"><em>given</em></span> a matrix with all of the stored values as a uniform. This
+            is simply because there is no need for it. All of the objects in a particular scene will
+            be rendered with the same perspective matrix, so there is no need to waste potentially
+            precious vertex shader time doing redundant computations.</p><p>Vector-matrix multiplication is such a common operation in graphics that operator * is
+            used to perform it. So the second line of <code class="function">main</code> multiplies the
+            perspective matrix by the camera position.</p><p>Please note the <span class="emphasis"><em>order</em></span> of this operation. The matrix is on the
+            left and the vector is on the right. Matrix multiplication is <span class="emphasis"><em>not</em></span>
+            commutative, so M*v is not the same thing as v*M. Normally vectors are considered 1xN
+            matrices (where N is the size of the vector). When you multiply vectors on the left of
+            the matrix, GLSL considers it an Nx1 matrix; this is the only way to make the
+            multiplication make sense. This will multiply the single row of the vector with each
+            column, summing the results, creating a new vector. This is <span class="emphasis"><em>not</em></span>
+            what we want to do. We want to multiply rows of the matrix by the vector, not columns of
+            the matrix. Put the vector on the right, not the left.</p><p>The program initialization routine has a few changes:</p><div class="example"><a name="d0e4371"></a><p class="title"><b>Example&nbsp;4.5.&nbsp;Program Initialization of Perspective Matrix</b></p><div class="example-contents"><pre class="programlisting">offsetUniform = glGetUniformLocation(theProgram, <span class="code-string">"offset"</span>);
+
+perspectiveMatrixUnif = glGetUniformLocation(theProgram, <span class="code-string">"perspectiveMatrix"</span>);
+
+<span class="code-keyword">float</span> fFrustumScale = <span class="code-number">1.0f</span>; <span class="code-keyword">float</span> fzNear = <span class="code-number">0.5f</span>; <span class="code-keyword">float</span> fzFar = <span class="code-number">3.0f</span>;
+
+<span class="code-keyword">float</span> theMatrix[<span class="code-number">16</span>];
+memset(theMatrix, <span class="code-number">0</span>, <span class="code-keyword">sizeof</span>(<span class="code-keyword">float</span>) * <span class="code-number">16</span>);
+
+theMatrix[<span class="code-number">0</span>] = fFrustumScale;
+theMatrix[<span class="code-number">5</span>] = fFrustumScale;
+theMatrix[<span class="code-number">10</span>] = (fzFar + fzNear) / (fzNear - fzFar);
+theMatrix[<span class="code-number">14</span>] = (<span class="code-number">2</span> * fzFar * fzNear) / (fzNear - fzFar);
+theMatrix[<span class="code-number">11</span>] = -<span class="code-number">1.0f</span>;
+
+glUseProgram(theProgram);
+glUniformMatrix4fv(perspectiveMatrixUnif, <span class="code-number">1</span>, GL_FALSE, theMatrix);
+glUseProgram(<span class="code-number">0</span>);</pre></div></div><br class="example-break"><p>A 4x4 matrix contains 16 values. So we start by creating an array of 16 floating-point
+            numbers called <code class="varname">theMatrix</code>. Since most of the values are zero, we can
+            just set the whole thing to zero. This works because IEEE 32-bit floating-point numbers
+            represent a zero as 4 bytes that all contain zero.</p><p>The next few functions set the particular values of interest into the matrix. Before
+            we can understand what's going on here, we need to talk a bit about ordering.</p><p>A 4x4 matrix is technically 16 values, so a 16-entry array can store a matrix. But
+            there are two ways to store a matrix as an array. One way is called
+                <em class="glossterm">column-major</em> order, the other naturally is
+                <em class="glossterm">row-major</em> order. Column-major order means that, for an NxM
+            matrix (columns x rows), the first N values in the array are the first column
+            (top-to-bottom), the next N values are the second column, and so forth. In row-major
+            order, the first M values in the array are the first row (left-to-right), followed by
+            another M values for the second row, and so forth.</p><p>In this example, the matrix is stored in column-major order. So array index 14 is in
+            the third row of the fourth column.</p><p>The entire matrix is a single uniform. To transfer the matrix to OpenGL, we use the
+                <code class="function">glUniformMatrix4fv</code> function. The first parameter is the uniform
+            location that we are uploading to. This function can be used to transfer an entire array
+            of matrices (yes, uniform arrays of any type are possible), so the second parameter is
+            the number of array entries. Since we're only providing one matrix, this value is
+            1.</p><p>The third parameter tells OpenGL what the ordering of the matrix data is. If it is
+                <code class="literal">GL_TRUE</code>, then the matrix data is in row-major order. Since our
+            data is column-major, we set it to <code class="literal">GL_FALSE</code>. The last parameter is
+            the matrix data itself.</p><p>Running this program will give us:</p><div class="figure"><a name="d0e4408"></a><p class="title"><b>Figure&nbsp;4.9.&nbsp;Perspective Matrix</b></p><div class="figure-contents"><div class="mediaobject"><img src="MatrixPerspective.png" alt="Perspective Matrix"></div></div></div><br class="figure-break"><p>The same thing we had before. Only now done with matrices.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tut04 Perspective Projection.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut04 Aspect of the World.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Perspective Projection&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192605/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Aspect of the World</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:05 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:04 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

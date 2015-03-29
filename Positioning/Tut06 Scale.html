@@ -1,0 +1,283 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app18.us.archive.org";archive_analytics.values.server_ms=101;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Scale</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 06.html" title="Chapter&nbsp;6.&nbsp;Objects in Motion"><link rel="prev" href="Tut06 Translation.html" title="Translation"><link rel="next" href="Tut06 Rotation.html" title="Rotation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Scale.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Scale.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192615" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813145942/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Scale.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:15 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813145942/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Scale.html" title="14:59:42 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:15 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140103011731/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Scale.html" title="3 Jan 2014"><strong>2014</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:15 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192615*/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Scale.html" title="See a list of every capture for this URL">39 captures</a>
+           <div class="r" title="Timespan for captures of this URL">23 Jan 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:100020111021_2012:-1:211110000021_2013:-1:112111212201_2014:-1:100102010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Scale</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tut06 Translation.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;6.&nbsp;Objects in Motion</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut06 Rotation.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e6189"></a>Scale</h2></div></div></div><p>Another kind of transformation is <em class="glossterm">scaling</em>. In terms of our
+            previous definition of a coordinate system, this means that our basis vectors are
+            getting shorter or longer.</p><div class="figure"><a name="d0e6198"></a><p class="title"><b>Figure&nbsp;6.4.&nbsp;Coordinate System Scaling in 2D</b></p><div class="figure-contents"><div class="mediaobject"><img src="ScaleTransform.svg" alt="Coordinate System Scaling in 2D"></div></div></div><br class="figure-break"><p>Scaling can be uniform, which means each basis vector is scaled by the same value. A
+            non-uniform scale means that each basis can get a different scale or none at all.</p><p>Uniform scales are used to allow objects in model space to have different units from
+            the units used in camera space. For example, a modeller may have generated the model in
+            inches, but the world uses centimeters. This will require applying a uniform scale to
+            all of these models to compensate for this. This scale should be 2.54, which is the
+            conversion factor from inches to centimeters.</p><p>Note that scaling always happens relative to the origin of the space being
+            scaled.</p><p>Recall how we defined the way coordinate systems generate a position, based on the
+            basis vectors and origin point:</p><div class="informalequation"><div class="mediaobject"><img src="CoordinateEquation.svg"></div></div><p>If you are increasing or decreasing the length of the basis vectors, this is the same
+            as multiplying those basis vectors by the new length. So we can re-express this equation
+            as follows:</p><div class="informalequation"><div class="mediaobject"><img src="ScaledCoordEquation.svg"></div></div><p>Since scalar-vector multiplication is both associative and commutative, we can
+            multiply the scales directly into the coordinate values to achieve the same effect. So a
+            scaled space can be reexpressed as simply multiplying the input coordinate
+            values.</p><p>This is easy enough to do in GLSL, if you pass a vector uniform containing the scale
+            values. But that's just not complicated enough. Obviously, we need to get matrices
+            involved, but how?</p><p>This gets a bit technical, in terms of how a matrix multiplication works. But look
+            back at the identity matrix:</p><div class="informalequation"><div class="mediaobject"><img src="IdentityMatrix.svg"></div></div><p>This matrix selects each coordinate in turn from the vector it is being multiplied
+            into. Each row is multiplied with the column of the vector; all of the zeros remove the
+            components of the vector that we do not want. The 1 value of each row multiplies into
+            the component we do want, thus selecting it. This produces the identity result: the
+            vector we started with.</p><p>We can see that, if the ones were some other value, we would get a scaled version of
+            the original vector, depending on which ones were changed. Thus, a scaling
+            transformation matrix looks like this:</p><div class="equation"><a name="d0e6236"></a><p class="title"><b>Equation&nbsp;6.4.&nbsp;Scaling Transformation Matrix</b></p><div class="equation-contents"><div class="mediaobject"><img src="ScaleMatrix.svg"></div></div></div><br class="equation-break"><p>You may start to see a pattern emerging here, something that begins to suggest why
+            matrices are very, very useful. I will not spoil it for you yet though.</p><p>The tutorial project <span class="propername">Scale</span> will display 5 objects
+            at various scales. The objects are all at the same Z distance from the camera, so the
+            only size difference between the objects is the scale effects applied to them. The
+            object in the center is unscaled; each of the other objects has a scale function of some
+            kind applied to them.</p><div class="figure"><a name="d0e6249"></a><p class="title"><b>Figure&nbsp;6.5.&nbsp;Scale Project</b></p><div class="figure-contents"><div class="mediaobject"><img src="Scales.png" alt="Scale Project"></div></div></div><br class="figure-break"><p>Other than the way the tutorial builds its matrices, there is no difference between
+            this tutorial project and the previous one. The matrix building code works as
+            follows:</p><pre class="programlisting">glm::mat4 ConstructMatrix(<span class="code-keyword">float</span> fElapsedTime)
+{
+    glm::vec3 theScale = CalcScale(fElapsedTime);
+    glm::mat4 theMat(<span class="code-number">1.0f</span>);
+    theMat[<span class="code-number">0</span>].x = theScale.x;
+    theMat[<span class="code-number">1</span>].y = theScale.y;
+    theMat[<span class="code-number">2</span>].z = theScale.z;
+    theMat[<span class="code-number">3</span>] = glm::vec4(offset, <span class="code-number">1.0f</span>);
+    
+    <span class="code-keyword">return</span> theMat;
+}</pre><p>As before, the scale is supplied by a number of scale functions, depending on which
+            instance is being rendered. The scale is stored in the columns of the identity matrix.
+            Then the translation portion of the matrix is filled in.</p><p>The <code class="varname">offset</code> variable is also a member of the
+                <code class="classname">Instance</code> object. Unlike the last tutorial, the offset is a
+            fixed value. We will discuss the ramifications of applying multiple transforms later;
+            suffice it to say, this currently works.</p><p>Scaling is only slightly more complicated than translation.</p><div class="sidebar"><p class="title"><b>Perspective and Scaling</b></p><p>The way we construct a scale transformation matrix may seem familiar to you. Back
+                in Tutorial 4, the perspective transformation involved a frustum scale value. This
+                was used to make up for the fact that our projection defined a specific location for
+                the plane of projection and camera eye point. Using this frustum scale, we could
+                give the appearance of having a larger or smaller viewing size. Indeed, we later
+                used this to define the aspect ratio as well as the field of view, using the
+                function defined earlier in this tutorial.</p><p>This frustum scale was ultimately nothing more than a scale factor applied the X
+                and Y positions. When we constructed the perspective matrix, we used the frustum
+                scale as a uniform scaling in the X and Y dimensions. The aspect ratio compensation
+                code was nothing more than applying a <span class="emphasis"><em>non</em></span>uniform scale.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d0e6281"></a>Inversion and Winding Order</h3></div></div></div><p>Scales can be theoretically negative, or even 0. A scale of 0 causes the basis
+                vector in that direction to become 0 entirely. An basis vector with no length means
+                that a dimension has effectively been lost. The resulting transform squashes
+                everything in that direction down to the origin. A 3D space becomes a 2D space (or
+                1D or 0D, depending on how many axes were scaled).</p><p>A negative scale changes the direction of an axis. This causes vertices
+                transformed with this scale to flip across the origin in that axis's direction. This
+                is called an <em class="glossterm">inversion</em>. This can have certain unintended
+                consequences. In particular, it can change the winding order of vertices.</p><p>Back in <a class="link" href="Tutorial 04.html#tut04_face_culling" title="Face Culling">Tutorial 4</a>, we introduced the
+                ability to cull triangles based on the order in which the vertices appeared in
+                window space. Depending on which axis you negate, relative to camera space, an
+                inversion can flip the expected winding order of vertices. Thus, triangles that
+                were, in model space, forward-facing now in camera space are backwards-facing. And
+                vice-versa.</p><p>Negative scaling can have other problems as well. This is not to say that
+                inversions cannot be used, but they should be used with care.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tut06 Translation.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut06 Rotation.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Translation&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192615/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Rotation</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:15 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:09 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

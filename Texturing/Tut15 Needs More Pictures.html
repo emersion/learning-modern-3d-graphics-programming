@@ -1,0 +1,384 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app3.us.archive.org";archive_analytics.values.server_ms=64;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Needs More Pictures</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 15.html" title="Chapter&nbsp;15.&nbsp;Many Images"><link rel="prev" href="Tut15 Magnification.html" title="Linear Filtering"><link rel="next" href="Tut15 Anisotropy.html" title="Anisotropy"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Texturing/Tut15%20Needs%20More%20Pictures.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Texturing/Tut15%20Needs%20More%20Pictures.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192602" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813150034/http://www.arcsynthesis.org/gltut/Texturing/Tut15%20Needs%20More%20Pictures.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:02 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813150034/http://www.arcsynthesis.org/gltut/Texturing/Tut15%20Needs%20More%20Pictures.html" title="15:00:34 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:02 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205195744/http://www.arcsynthesis.org/gltut/Texturing/Tut15%20Needs%20More%20Pictures.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:02 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192602*/http://www.arcsynthesis.org/gltut/Texturing/Tut15%20Needs%20More%20Pictures.html" title="See a list of every capture for this URL">30 captures</a>
+           <div class="r" title="Timespan for captures of this URL">2 Oct 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000121_2012:-1:201121110020_2013:-1:001002211111_2014:-1:000102010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Needs More Pictures</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tut15 Magnification.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;15.&nbsp;Many Images</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut15 Anisotropy.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e14787"></a>Needs More Pictures</h2></div></div></div><p>Speaking of distracting, let's talk about what is going on in the distance. When the
+            camera moves, the more distant parts of the texture look like a jumbled mess. Even when
+            the camera motion is paused, it still doesn't look like a checkerboard.</p><p>What is going on there is really simple. The way our filtering works is that, for a
+            given texture coordinate, we take either the nearest texel value, or the nearest 4
+            texels and interpolate. The problem is that, for distant areas of our surface, the
+            texture space area covered by our fragment is much larger than 4 texels across.</p><div class="figure"><a name="d0e14795"></a><p class="title"><b>Figure&nbsp;15.5.&nbsp;Large Minification Sampling</b></p><div class="figure-contents"><div class="mediaobject"><img src="LargeMinificDiag.svg" alt="Large Minification Sampling"></div></div></div><br class="figure-break"><p>The inner box represents the nearest texels, while the outer box represents the entire
+            fragment mapped area. We can see that the value we get with nearest sampling will be
+            pure white, since the four nearest values are white. But the value we should get based
+            on the covered area is some shade of gray.</p><p>In order to accurately represent this area of the texture, we would need to sample
+            from more than just 4 texels. The GPU is certainly capable of detecting the fragment
+            area and sampling enough values from the texture to be representative. But this would be
+            exceedingly expensive, both in terms of texture bandwidth and computation.</p><p>What if, instead of having to sample more texels, we had a number of smaller versions
+            of our texture? The smaller versions effectively pre-compute groups of texels. That way,
+            we could just sample 4 texels from a texture that is close enough to the size of our
+            fragment area.</p><div class="figure"><a name="d0e14807"></a><p class="title"><b>Figure&nbsp;15.6.&nbsp;Mipmapped Minification Sampling</b></p><div class="figure-contents"><div class="mediaobject"><img src="MipmapDiagram.svg" alt="Mipmapped Minification Sampling"></div></div></div><br class="figure-break"><p>These smaller versions of an image are called <em class="glossterm">mipmaps</em>; they are
+            also sometimes called mipmap levels. Previously, it was said that textures can store
+            multiple images. The additional images, for many texture types, are mipmaps. By
+            performing linear sampling against a lower mipmap level, we get a gray value that, while
+            not the exact color the coverage area suggests, is much closer to what we should get
+            than linear filtering on the large mipmap.</p><p>In OpenGL, mipmaps are numbered starting from 0. The 0 image is the largest mipmap,
+            what is usually considered the main texture image. When people speak of a texture having
+            a certain size, they mean the resolution of mipmap level 0. Each mipmap is half as small
+            as the previous one. So if our main image, mipmap level 0, has a size of 128x128, the
+            next mipmap, level 1, is 64x64. The next is 32x32. And so forth, down to 1x1 for the
+            smallest mipmap.</p><p>For textures that are not square (which as we saw in the previous tutorial, is
+            perfectly legitimate), the mipmap chain keeps going until all dimensions are 1. So a
+            texture who's size is 128x16 (remember: the texture's size is the size of the largest
+            mipmap) would have just as many mipmap levels as a 128x128 texture. The mipmap level 4
+            of the 128x16 texture would be 8x1; the next mipmap would be 4x1.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>It is also perfectly legal to have texture sizes that are not powers of two. For
+                them, mipmap sizes are always rounded down. So a 129x129 texture's mipmap 1 will be 64x64.
+                A 131x131 texture's mipmap 1 will be 65x65, and mipmap 2 will be 32x32.</p></div><p>The DDS image format is one of the few image formats that actually supports storing
+            all of the mipmaps for a texture in the same file. Most image formats only allow one
+            image in a single file. The texture loading code for our 128x128 texture with mipmaps is
+            as follows:</p><div class="example"><a name="d0e14827"></a><p class="title"><b>Example&nbsp;15.1.&nbsp;DDS Texture Loading with Mipmaps</b></p><div class="example-contents"><pre class="programlisting">std::string filename(LOCAL_FILE_DIR);
+filename += <span class="code-string">"checker.dds"</span>;
+
+std::auto_ptr&lt;glimg::ImageSet&gt; pImageSet(glimg::loaders::dds::LoadFromFile(filename.c_str()));
+
+glGenTextures(<span class="code-number">1</span>, &amp;g_checkerTexture);
+glBindTexture(GL_TEXTURE_2D, g_checkerTexture);
+
+<span class="code-keyword">for</span>(<span class="code-keyword">int</span> mipmapLevel = <span class="code-number">0</span>; mipmapLevel &lt; pImageSet-&gt;GetMipmapCount(); mipmapLevel++)
+{
+    glimg::SingleImage image = pImageSet-&gt;GetImage(mipmapLevel, <span class="code-number">0</span>, <span class="code-number">0</span>);
+    glimg::Dimensions dims = pImage-&gt;GetDimensions();
+    
+    glTexImage2D(GL_TEXTURE_2D, mipmapLevel, GL_RGB8, dims.width, dims.height, <span class="code-number">0</span>,
+        GL_BGRA, GL_UNSIGNED_INT_<span class="code-number">8</span>_<span class="code-number">8</span>_<span class="code-number">8</span>_<span class="code-number">8</span>_REV, image.GetImageData());
+}
+
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, <span class="code-number">0</span>);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, pImageSet-&gt;GetMipmapCount() - <span class="code-number">1</span>);
+glBindTexture(GL_TEXTURE_2D, <span class="code-number">0</span>);</pre></div></div><br class="example-break"><p>Because the file contains multiple mipmaps, we must load each one in turn. The GL
+            Image library considers each mipmap to be its own image. The
+                <code class="function">GetDimensions</code> member of
+                <code class="classname">glimg::SingleImage</code> returns the size of the particular
+            mipmap.</p><p>The <code class="function">glTexImage2D</code> function takes the mipmap level to load as the
+            second parameter. The width and height parameters represent the size of the mipmap in
+            question, not the size of the base level.</p><p>Notice that the last statements have changed. The
+                <code class="literal">GL_TEXTURE_BASE_LEVEL</code> and <code class="literal">GL_TEXTURE_MAX_LEVEL</code>
+            parameters tell OpenGL what mipmaps in our texture can be used. This represents a closed
+            range. Since a 128x128 texture has 8 mipmaps, we use the range [0, 7]. The base level of
+            a texture is the largest usable mipmap level, while the max level is the smallest usable
+            level. It is possible to omit some of the smaller mipmap levels. Note that level 0 is
+            always the largest possible mipmap level.</p><p>Filtering based on mipmaps is unsurprisingly named <em class="glossterm">mipmap
+                filtering</em>. This tutorial does not load two checkerboard textures; it
+            only ever uses one checkerboard. The reason mipmaps have not been used until now is
+            because mipmap filtering was not activated. Setting the base and max level is not
+            enough; the sampler object must be told to use mipmap filtering. If it does not, then it
+            will simply use the base level.</p><p>Mipmap filtering only works for minification, since minification represents a fragment
+            area that is larger than the texture's resolution. To activate this, we use a special
+                <code class="literal">MIPMAP</code> mode of minification filtering.</p><pre class="programlisting">glSamplerParameteri(g_samplers[<span class="code-number">2</span>], GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+glSamplerParameteri(g_samplers[<span class="code-number">2</span>], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);</pre><p>The <code class="literal">GL_LINEAR_MIPMAP_NEAREST</code> minification filter means the
+            following. For a particular call to the GLSL <code class="function">texture</code> function, it
+            will detect which mipmap is the one that is nearest to our fragment area. This detection
+            is based on the angle of the surface relative to the camera's view<sup>[<a name="d0e14873" href="#ftn.d0e14873" class="footnote">8</a>]</sup>. Then, when it samples from that mipmap, it will use linear filtering of the
+            four nearest samples within that one mipmap.</p><p>If you press the <span class="keycap"><strong>3</strong></span> key in the tutorial, you can see the effects of
+            this filtering mode.</p><div class="figure"><a name="d0e14882"></a><p class="title"><b>Figure&nbsp;15.7.&nbsp;Hallway with Mipmapping</b></p><div class="figure-contents"><div class="mediaobject"><img src="LinearMipmapNearest.png" alt="Hallway with Mipmapping"></div></div></div><br class="figure-break"><p>That's a lot more reasonable. It isn't perfect, but it is much better than the random
+            motion in the distance that we have previously seen.</p><p>It can be difficult to truly understand the effects of mipmap filtering when using
+            normal textures and mipmaps. Therefore, if you press the <span class="keycap"><strong>Spacebar</strong></span>, the
+            tutorial will switch to a special texture. It is not loaded from a file; it is instead
+            constructed at runtime.</p><p>Normally, mipmaps are simply smaller versions of larger images, using linear filtering
+            or various other algorithms to compute a reasonable scaled down result. This special
+            texture's mipmaps are all flat colors, but each mipmap has a different color. This makes
+            it much more obvious where each mipmap is.</p><div class="figure"><a name="d0e14897"></a><p class="title"><b>Figure&nbsp;15.8.&nbsp;Hallway with Special Texture</b></p><div class="figure-contents"><div class="mediaobject"><img src="SpecialHallwayLMipN.png" alt="Hallway with Special Texture"></div></div></div><br class="figure-break"><p>Now we can really see where the different mipmaps are. They don't quite line up on the
+            corners. But remember: this just shows the mipmap boundaries, not the texture
+            coordinates themselves.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d0e14905"></a>Special Texture Generation</h3></div></div></div><p>The special mipmap viewing texture is interesting, as it demonstrates an issue you
+                may need to work with when uploading certain textures: alignment.</p><p>The checkerboard texture, though it only stores black and white values, actually
+                has all three color channels, plus a fourth value. Since each channel is stored as
+                8-bit unsigned normalized integers, each pixel takes up 4 * 8 or 32 bits, which is 4
+                bytes.</p><p>OpenGL image uploading and downloading is based on horizontal rows of image data.
+                Each row is expected to have a certain byte alignment. The OpenGL default is 4
+                bytes; since our pixels are 4 bytes in length, every mipmap will have a line size in
+                bytes that is a multiple of 4 bytes. Even the 1x1 mipmap level is 4 bytes in
+                size.</p><p>Note that the internal format we provide is <code class="literal">GL_RGB8</code>, even
+                though the components we are transferring are <code class="literal">GL_BGRA</code> (the A
+                being the fourth component). This means that OpenGL will more or less discard the
+                fourth component we upload. That is fine.</p><p>The issue with the special texture's pixel data is that it is not 4 bytes in
+                length. The function used to generate a mipmap level of the special texture is as
+                follows:</p><div class="example"><a name="d0e14924"></a><p class="title"><b>Example&nbsp;15.2.&nbsp;Special Texture Data</b></p><div class="example-contents"><pre class="programlisting"><span class="code-keyword">void</span> FillWithColor(std::vector&lt;GLubyte&gt; &amp;buffer,
+                   GLubyte red, GLubyte green, GLubyte blue,
+                   <span class="code-keyword">int</span> width, <span class="code-keyword">int</span> height)
+{
+    <span class="code-keyword">int</span> numTexels = width * height;
+    buffer.resize(numTexels * <span class="code-number">3</span>);
+    
+    std::vector&lt;GLubyte&gt;::iterator it = buffer.begin();
+    <span class="code-keyword">while</span>(it != buffer.end())
+    {
+        *it++ = red;
+        *it++ = green;
+        *it++ = blue;
+    }
+}</pre></div></div><br class="example-break"><p>This creates a texture that has 24-bit pixels; each pixel contains 3 bytes.</p><p>That is fine for any width value that is a multiple of 4. However, if the width is
+                2, then each row of pixel data will be 6 bytes long. That is not a multiple of 4 and
+                therefore breaks alignment.</p><p>Therefore, we must change the pixel alignment that OpenGL uses. The
+                    <code class="function">LoadMipmapTexture</code> function is what generates the special
+                texture. One of the first lines is this:</p><pre class="programlisting">GLint oldAlign = <span class="code-number">0</span>;
+glGetIntegerv(GL_UNPACK_ALIGNMENT, &amp;oldAlign);
+glPixelStorei(GL_UNPACK_ALIGNMENT, <span class="code-number">1</span>);</pre><p>The first two lines gets the old alignment, so that we can reset it once we are
+                finished. The last line uses <code class="function">glPixelStorei</code>
+            </p><p>Note that the GL Image library does provide an alignment value; it is part of the
+                    <code class="classname">Dimensions</code> structure of an image. We have simply not used
+                it yet. In the last tutorial, our row widths were aligned to 4 bytes, so there was
+                no chance of a problem. In this tutorial, our image data is 4-bytes in pixel size,
+                so it is always intrinsically aligned to 4 bytes.</p><p>That being said, you should always keep row alignment in mind, particularly when
+                dealing with mipmaps.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d0e14952"></a>Filtering Between Mipmaps</h3></div></div></div><p>Our mipmap filtering has been a dramatic improvement over previous efforts.
+                However, it does create artifacts. One of particular concern is the change between
+                mipmap levels. It is abrupt and somewhat easy to notice for a moving scene. Perhaps
+                there is a way to smooth that out.</p><p>Our current minification filtering picks a single mipmap level and selects a
+                sample from it. It would be better if we could pick the two nearest mipmap levels
+                and blend between the values fetched from the two textures. This would give us a
+                smoother transition from one mipmap level to the next.</p><p>This is done by using <code class="literal">GL_LINEAR_MIPMAP_LINEAR</code> minification
+                filtering. The first <code class="literal">LINEAR</code> represents the filtering done within
+                a single mipmap level, and the second <code class="literal">LINEAR</code> represents the
+                filtering done between mipmap levels.</p><p>To see this in action, press the <span class="keycap"><strong>4</strong></span> key.</p><div class="figure"><a name="d0e14975"></a><p class="title"><b>Figure&nbsp;15.9.&nbsp;Linear Mipmap Linear Comparison</b></p><div class="figure-contents"><div class="mediaobject"><img src="LMipLCompare.png" alt="Linear Mipmap Linear Comparison"></div></div></div><br class="figure-break"><p>That is an improvement. There are still issues to work out, but it is much harder
+                to see where one mipmap ends and another begins.</p><p>OpenGL actually allows all combinations of <code class="literal">NEAREST</code> and
+                    <code class="literal">LINEAR</code> in minification filtering. Using nearest filtering
+                within a mipmap level while linearly filtering between levels
+                    (<code class="literal">GL_NEAREST_MIPMAP_LINEAR</code>) is possible but not terribly
+                useful in practice.</p><div class="sidebar"><p class="title"><b>Filtering Nomenclature</b></p><p>If you are familiar with texture filtering from other sources, you may have
+                    heard the terms <span class="quote">&#8220;<span class="quote">bilinear filtering</span>&#8221;</span> and <span class="quote">&#8220;<span class="quote">trilinear
+                        filtering</span>&#8221;</span> before. Indeed, you may know that linear filtering between
+                    mipmap levels is commonly called trilinear filtering.</p><p>This book does not use that terminology. And for good reason: <span class="quote">&#8220;<span class="quote">trilinear
+                        filtering</span>&#8221;</span> is a misnomer.</p><p>To understand the problem, it is important to understand what <span class="quote">&#8220;<span class="quote">bilinear
+                        filtering</span>&#8221;</span> means. The <span class="quote">&#8220;<span class="quote">bi</span>&#8221;</span> in bilinear comes from doing
+                    linear filtering along the two axes of a 2D texture. So there is linear
+                    filtering in the S and T directions (remember: standard OpenGL nomenclature
+                    calls the 2D texture coordinate axes S and T); since that is two directions, it
+                    is called <span class="quote">&#8220;<span class="quote">bilinear filtering</span>&#8221;</span>. Thus <span class="quote">&#8220;<span class="quote">trilinear</span>&#8221;</span> comes
+                    from adding a third direction of linear filtering: between mipmap levels.</p><p>Therefore, one could consider using <code class="literal">GL_LINEAR</code> mag and min
+                    filtering to be bilinear, and using <code class="literal">GL_LINEAR_MIPMAP_LINEAR</code>
+                    to be trilinear.</p><p>That's all well and good... for 2D textures. But what about for 1D textures?
+                    Since 1D textures are one dimensional, <code class="literal">GL_LINEAR</code> mag and min
+                    filtering only filters in one direction: S. Therefore, it would be reasonable to
+                    call 1D <code class="literal">GL_LINEAR</code> filtering simply <span class="quote">&#8220;<span class="quote">linear
+                        filtering.</span>&#8221;</span> Indeed, filtering between mipmap levels of 1D textures
+                    (yes, 1D textures can have mipmaps) would have to be called <span class="quote">&#8220;<span class="quote">bilinear
+                        filtering.</span>&#8221;</span></p><p>And then there are 3D textures. <code class="literal">GL_LINEAR</code> mag and min
+                    filtering filters in all 3 directions: S, T, and R. Therefore, that would have
+                    to be called <span class="quote">&#8220;<span class="quote">trilinear filtering.</span>&#8221;</span> And if you add linear mipmap
+                    filtering on top of that (yes, 3D textures can have mipmaps), it would be
+                        <span class="quote">&#8220;<span class="quote">quadrilinear filtering.</span>&#8221;</span></p><p>Therefore, the term <span class="quote">&#8220;<span class="quote">trilinear filtering</span>&#8221;</span> means absolutely
+                    nothing without knowing what the texture's type is. Whereas
+                        <code class="literal">GL_LINEAR_MIPMAP_LINEAR</code> always has a well-defined meaning
+                    regardless of the texture's type.</p><p>Unlike geometry shaders, which ought to have been called primitive shaders,
+                    OpenGL does not enshrine this common misnomer into its API. There is no
+                        <code class="literal">GL_TRILINEAR</code> enum. Therefore, in this book, we can and
+                    will use the proper terms for these.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a name="ftn.d0e14873" href="#d0e14873" class="para">8</a>] </sup>This is a simplification; a more thorough discussion is forthcoming.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tut15 Magnification.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 15.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut15 Anisotropy.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Linear Filtering&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192602/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Anisotropy</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:02 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:34 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

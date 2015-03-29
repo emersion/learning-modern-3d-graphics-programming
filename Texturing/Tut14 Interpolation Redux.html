@@ -1,0 +1,272 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app14.us.archive.org";archive_analytics.values.server_ms=184;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Interpolation Redux</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 14.html" title="Chapter&nbsp;14.&nbsp;Textures are not Pictures"><link rel="prev" href="Tutorial 14.html" title="Chapter&nbsp;14.&nbsp;Textures are not Pictures"><link rel="next" href="Tut14 Texture Mapping.html" title="Texture Mapping"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Texturing/Tut14%20Interpolation%20Redux.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Texturing/Tut14%20Interpolation%20Redux.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192612" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813153821/http://www.arcsynthesis.org/gltut/Texturing/Tut14%20Interpolation%20Redux.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:12 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813153821/http://www.arcsynthesis.org/gltut/Texturing/Tut14%20Interpolation%20Redux.html" title="15:38:21 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:12 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205015333/http://www.arcsynthesis.org/gltut/Texturing/Tut14%20Interpolation%20Redux.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:12 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192612*/http://www.arcsynthesis.org/gltut/Texturing/Tut14%20Interpolation%20Redux.html" title="See a list of every capture for this URL">33 captures</a>
+           <div class="r" title="Timespan for captures of this URL">10 Jul 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000111021_2012:-1:211111110021_2013:-1:111001210211_2014:-1:000110010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Interpolation Redux</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tutorial 14.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;14.&nbsp;Textures are not Pictures</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut14 Texture Mapping.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e14097"></a>Interpolation Redux</h2></div></div></div><p>The next step when working with textures is to associate a texture with locations on
+            the surface of an object. But before we can do that, we need to have a discussion about
+            what it means to interpolate a value across a triangle.</p><p>Thus far, we have more or less glossed over the details of interpolation. We expanded
+            on this earlier when we explained why per-vertex lighting would not work for certain
+            kinds of functions, as well as when explaining why normals do not interpolate well. But
+            now that we want to associate vertices of a triangle with locations on a texture, we
+            need to fully explain what interpolation means.</p><p>The main topic is linearity. In the earlier discussions, it was stressed that
+            interpolation was linear. The question that was danced around is both simple and
+            obscure: linear in what space?</p><p>The perspective projection is a non-linear transform; that's why a matrix
+            multiplication is insufficient to express it. Matrices can only handle linear
+            transformations, and the perspective projection needs a division, which is non-linear.
+            We have seen the effect of this non-linear transformation before:</p><div class="figure"><a name="d0e14109"></a><p class="title"><b>Figure&nbsp;14.4.&nbsp;Projection and Interpolation</b></p><div class="figure-contents"><div class="mediaobject"><img src="PerspectiveInterpolation.svg" alt="Projection and Interpolation"></div></div></div><br class="figure-break"><p>The transformation from normalized device coordinate space to window space is fully
+            linear. So the problem is the transformation from camera space to NDC space, the
+            perspective projection.</p><p>From this diagram we see that lines which are parallel in camera space are not
+            necessarily parallel in NDC space; this is one of the features of non-linear transforms.
+            But most important of all is the fact that the distance between objects has changed
+            non-linearly. In camera-space, the lines parallel to the Z axis are all equally spaced.
+            In NDC space, they are not.</p><p>Look at the lines A and B. Imagine that these are the only two vertices in the object.
+            In camera-space, the point halfway between them is C. However, in NDC space, the point
+            halfway between them is D. The points C and D are not that close to one another in
+            either space.</p><p>So, what space has OpenGL been doing our interpolation in? It might seem obvious to
+            say window space, since window space is the space that the rasterizer (the hardware that
+            does the interpolating) sees and uses. But if it had, we would have had a great many
+            interpolation problems.</p><p>Consider interpolating camera space positions. This only works if the interpolation
+            happens in camera-space (or some linear transform thereof). Look at the diagram again;
+            the camera-space position C would be computed for the NDC location D. That would be very
+            wrong.</p><p>So our interpolation has somehow been happening in camera space, even though the
+            rasterizer only sees window space. What mechanism causes this?</p><p>The ability to linearly interpolate values in pre-projection space is called
+                <em class="glossterm">perspective-correct interpolation.</em> And we now get to the
+            final reason why our vertex shader provides values in clip-space rather than having the
+            shader perform the perspective divide. The W term of clip-space is vital for performing
+            perspective-correct interpolation.</p><p>This makes sense; the clip-space W is after all what makes our transformation
+            non-linear. Perspective-correction simply uses the clip-space W to adjust the
+            interpolation so that it happens in a space that is linear with respect to clip-space.
+            And since clip-space is a linear transform of camera space (using 4D homogeneous
+            coordinates), everything works out. Technically, perspective-correct interpolation does
+            not cause interpolation in camera space, but it interpolates in a space that is a linear
+            transform from camera space.</p><p>To see the effects of perspective-correction most dramatically, fire up the <span class="propername">Perspective Interpolation</span> project.</p><p>There are no camera controls in this demo; the camera is fixed so as to allow the
+            illusion presented to work. Pressing the <span class="keycap"><strong>P</strong></span> key switches between
+            perspective-correct interpolation and window-space linear interpolation.</p><div class="figure"><a name="d0e14144"></a><p class="title"><b>Figure&nbsp;14.5.&nbsp;Perspective Correct Interpolation</b></p><div class="figure-contents"><div class="mediaobject"><img src="PerspectiveInterpolation.png" alt="Perspective Correct Interpolation"></div><div class="caption"><p>Left: Linear interpolation. Right: Perspective-correct interpolation</p></div></div></div><br class="figure-break"><p>The interesting bit is as follows. Switch to the perspective-correct version (a
+            message will appear in the console window) and press the <span class="keycap"><strong>S</strong></span> key. Now,
+            the <span class="keycap"><strong>P</strong></span> key no longer seems to have any effect; we seem to be trapped in
+            linear-interpolation.</p><p>What happens is that the <span class="keycap"><strong>S</strong></span> key switches meshes. The
+                <span class="quote">&#8220;<span class="quote">fake</span>&#8221;</span> mesh is not really a hallway; it is perfectly flat. It is more
+            or less a mesh who's vertex positions are in NDC-space, after multiplying the original
+            hallway by the perspective matrix. The difference is that there is no W coordinate; it's
+            just a flat object, an optical illusion. There is no perspective information for the
+            perspective-correction logic to key on, so it looks just like window-space linear
+            interpolation.</p><p>The switch used to turn on or off perspective-correct interpolation is the
+            interpolation qualifier. Previously, we said that there were three qualifiers:
+                <code class="literal">flat</code>, <code class="literal">smooth</code>, and
+                <code class="literal">noperspective</code>. The third one was previously left undefined
+            before; you can probably guess what it does now.</p><p>We are not going to use <code class="literal">noperspective</code> in the immediate future.
+            Indeed, doing window space interpolation with a perspective projection is exceedingly
+            rare, far more rare than <code class="literal">flat</code>. The important thing to understand from
+            this section is that interpolation style matters. And <code class="literal">smooth</code> will be
+            our default interpolation; fortunately, it is OpenGL's default too.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tutorial 14.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut14 Texture Mapping.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;14.&nbsp;Textures are not Pictures&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192612/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Texture Mapping</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:12 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:30 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

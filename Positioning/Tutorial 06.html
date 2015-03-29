@@ -1,0 +1,273 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app13.us.archive.org";archive_analytics.values.server_ms=166;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Chapter&nbsp;6.&nbsp;Objects in Motion</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Positioning.html" title="Part&nbsp;II.&nbsp;Positioning"><link rel="prev" href="Tut05 Glossary.html" title="Glossary"><link rel="next" href="Tut06 Translation.html" title="Translation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2006.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2006.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192614" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813150141/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2006.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:14 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813150141/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2006.html" title="15:01:41 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:14 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205023316/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2006.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:14 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192614*/http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2006.html" title="See a list of every capture for this URL">41 captures</a>
+           <div class="r" title="Timespan for captures of this URL">12 Nov 10 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:100010111021_2012:-1:211021100131_2013:-1:112112120211_2014:-1:000101010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;6.&nbsp;Objects in Motion</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tut05 Glossary.html">Prev</a>&nbsp;</td><th width="60%" align="center">Part&nbsp;II.&nbsp;Positioning</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut06 Translation.html">Next</a></td></tr></table><hr></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e5957"></a>Chapter&nbsp;6.&nbsp;Objects in Motion</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="Tutorial 06.html#d0e5963">Spaces</a></span></dt><dt><span class="section"><a href="Tut06 Translation.html">Translation</a></span></dt><dt><span class="section"><a href="Tut06 Scale.html">Scale</a></span></dt><dt><span class="section"><a href="Tut06 Rotation.html">Rotation</a></span></dt><dt><span class="section"><a href="Tut06 Fun with Matrices.html">Fun with Matrices</a></span></dt><dt><span class="section"><a href="Tut06 In Review.html">In Review</a></span></dt><dt><span class="section"><a href="Tut06 Glossary.html">Glossary</a></span></dt></dl></div><p>In this tutorial, we will look at a number of ways to transform objects, rendering them in
+        different locations and orientations in the world. And we will also solve the secret of why
+        we overcomplicated everything with those matrices.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e5963"></a>Spaces</h2></div></div></div><p>Throughout this series of tutorials, we have discussed a number of different spaces.
+            We have seen OpenGL-defined spaces like normalized device coordinate (NDC) space,
+            clip-space, and window space. And we have seen user-defined spaces like camera space.
+            But we have yet to formally discuss about what a space actually is.</p><p>A <em class="glossterm">space</em> is a shorthand term for a <em class="glossterm">coordinate
+                system.</em> For the purposes of this conversation, a coordinate system or
+            space consists of the following:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>The dimensionality of the space. 2D, 3D, 4D, etc.</p></li><li class="listitem"><p>A series of vectors in those dimensions that define the axes of the space. The
+                    directions do not have to be orthogonal (at right-angles) to one another, but
+                    there must be one axis per dimension. Each axis vector in the space has a name,
+                    like X, Y, Z, etc. These are called the <em class="glossterm">basis vectors</em> of
+                    a space.</p></li><li class="listitem"><p>A location in the space that defines the central <em class="glossterm">origin</em>
+                    point. The origin is the point from which all other points in the space are
+                    derived.</p></li><li class="listitem"><p>An area within this space in which points are valid. Outside of this range,
+                    positions are not valid. The range can be infinite depending on the
+                    space.</p></li></ul></div><p>A position or vertex in a space is defined as the sum of the basis vectors, where each
+            basis vector is multiplied by a scalar value called a coordinate. Geometrically, this
+            looks like the following:</p><div class="figure"><a name="d0e5997"></a><p class="title"><b>Figure&nbsp;6.1.&nbsp;Two 2D Coordinate Systems</b></p><div class="figure-contents"><div class="mediaobject"><img src="CoordSys2D.svg" alt="Two 2D Coordinate Systems"></div></div></div><br class="figure-break"><p>These are two different coordinate systems. The same coordinate, in this case (2, 2)
+            (each basis vector is added twice) can have two very different positions, from the point
+            of view of a neutral observer. What is interesting to note is that (2, 2) is the same
+            value in their own coordinate system. This means that a coordinate itself is not enough
+            information to know what it means; one must also know what coordinate system it is in
+            before you can know anything about it.</p><p>The numerical version of the coordinate system equation is as follows:</p><div class="equation"><a name="d0e6007"></a><p class="title"><b>Equation&nbsp;6.1.&nbsp;Coordinate System</b></p><div class="equation-contents"><div class="mediaobject"><img src="FullCoordinateEquation.svg"></div></div></div><br class="equation-break"><p>The geometric version is all well and good when dealing with the geometric basis
+            vectors and origin point. The origin point is just a position, and the basis vectors are
+            simply drawn. But what does it mean to give actual numbers to these concepts in the
+            numerical version? A position, like the origin point, is itself a coordinate. Which
+            means that it must be defined relative to some coordinate system. The same goes for the
+            basis vectors.</p><p>Ultimately, this means that we cannot look numerically at a single coordinate system.
+            Since the coordinate values themselves are meaningless without a coordinate system, a
+            coordinate system can only be numerically expressed in relation to another coordinate
+            system.</p><p>Technically, the geometric version of coordinate systems works the same way. The
+            length of the basis vectors in the geometric diagrams are relative to our own
+            self-imposed sense of length and space. Essentially, everything is relative to
+            something, and we will explore this in the near future.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d0e6019"></a>Transformation</h3></div></div></div><p>In the more recent tutorials, the ones dealing with perspective projections, we
+                have been taking positions in one coordinate system (space) and putting them in
+                another coordinate system. Specifically, we had objects in camera space that we
+                moved into clip space. The process of taking a coordinate in one space and
+                specifying it as a coordinate in another space is called
+                    <em class="glossterm">transformation</em>. The coordinate's actual meaning has not
+                changed; all that has changed is the coordinate system that this coordinate is
+                relative to.</p><p>We have seen a number of coordinate system transformations. OpenGL implements the
+                transformation from clip-space to NDC space and the transformation from NDC to
+                window space. Our shaders implement the transformation from camera space to
+                clip-space, and this was done using a matrix. Perspective projection (and
+                orthographic, for that matter) are simply a special kind of transformation.</p><p>This tutorial will cover a large number of different kinds of transform
+                operations and how to implement them in OpenGL.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d0e6031"></a>Model Space</h3></div></div></div><p>Before we begin, we must define a new kind of space: <em class="glossterm">model
+                    space.</em> This is a user-defined space, but unlike camera space, model
+                space does not have a single definition. It is instead a catch-all term for the
+                space that a particular object begins in. Coordinates in buffer objects, passed to
+                the vertex shaders as vertex attributes are <span class="foreignphrase"><em class="foreignphrase">de facto</em></span>
+                in model space.</p><p>There are an infinite variety of model spaces. Each object one intends to render
+                can, and often does, have its own model space, even if the difference between these
+                spaces is only in the origin point. Model spaces for an object are generally defined
+                for the convenience of the modeller or the programmer who intends to use that
+                model.</p><p>The transformation operation being discussed in this tutorial is the transform
+                from model space to camera space. Our shaders already know how to handle
+                camera-space data; all they need is a way to transform from model space to camera
+                space.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tut05 Glossary.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Positioning.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut06 Translation.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Glossary&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192614/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Translation</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:14 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:08:34 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

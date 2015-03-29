@@ -1,0 +1,271 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app1.us.archive.org";archive_analytics.values.server_ms=284;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Rotation</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="../index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="Tutorial 06.html" title="Chapter&nbsp;6.&nbsp;Objects in Motion"><link rel="prev" href="Tut06 Scale.html" title="Scale"><link rel="next" href="Tut06 Fun with Matrices.html" title="Fun with Matrices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Rotation.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Rotation.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192603" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20140813151156/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Rotation.html" title="13 Aug 2014">AUG</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:03 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140813151156/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Rotation.html" title="15:11:56 Aug 13, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:03 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131205202356/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Rotation.html" title="5 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:03 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192603*/http://www.arcsynthesis.org/gltut/Positioning/Tut06%20Rotation.html" title="See a list of every capture for this URL">36 captures</a>
+           <div class="r" title="Timespan for captures of this URL">25 Dec 10 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000001_2011:-1:000000111031_2012:-1:211110000021_2013:-1:112111111211_2014:-1:000102010000_2015:1:010000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Rotation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Tut06 Scale.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;6.&nbsp;Objects in Motion</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="Tut06 Fun with Matrices.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e6298"></a>Rotation</h2></div></div></div><p>A <em class="glossterm">rotation</em> transformation is the result of the orientation of
+            the initial space being different from the orientation of the destination space. The
+            basis vectors of the space do not change orientation relative to one another, but
+            relative to the destination coordinate system, they are pointed in different directions
+            than they were in their own coordinate system.</p><p>A rotation looks like this:</p><div class="figure"><a name="d0e6309"></a><p class="title"><b>Figure&nbsp;6.6.&nbsp;Coordinate Rotation in 2D</b></p><div class="figure-contents"><div class="mediaobject"><img src="RotationTransform.svg" alt="Coordinate Rotation in 2D"></div></div></div><br class="figure-break"><p>Rotations are usually considered the most complex of the basic transformations,
+            primarily because of the math involved in computing the transformation matrix.
+            Generally, rotations are looked at as an operation, such as rotating around a particular
+            basis vector or some such. The prior part of the tutorial laid down some of the
+            groundwork that will make this much simpler.</p><p>First, let's look back at our equation for determining what the position of a
+            coordinate is relative to certain coordinate space:</p><div class="informalequation"><div class="mediaobject"><img src="CoordinateEquation.svg"></div></div><p>Does not this look a bit familiar? No? Maybe this look at vector-matrix multiplication
+            will jog your memory:</p><div class="informalequation"><div class="mediaobject"><img src="VectorMatrixMultiplication.svg"></div></div><p>Still nothing? Perhaps an alternate look would help:</p><div class="equation"><a name="d0e6331"></a><p class="title"><b>Equation&nbsp;6.5.&nbsp;Vectorized Matrix Multiplication</b></p><div class="equation-contents"><div class="mediaobject"><img src="CoordSysMatrixMultiply.svg"></div></div></div><br class="equation-break"><p>Does it look familiar <span class="emphasis"><em>now</em></span>?</p><p>What this tells us is that the columns of our transformation matrices are, and have
+                <span class="emphasis"><em>always</em></span> been, nothing more than the axes of a coordinate system.
+            Except for the fourth column; because the input position has a 1 in the W, it acts as an
+            offset.</p><p>Transformation from one space to another ultimately means this: taking the basis
+            vectors and origin point from the original coordinate system and re-expressing them
+            relative to the destination coordinate system. The transformation matrix from one space
+            to another contains the basis vectors and origin of the original coordinate system, but
+            the <span class="emphasis"><em>values</em></span> of those basis vectors and origin are relative to the
+            destination coordinate system.</p><p>Earlier, we said that numerical coordinates of a space must be expressed relative to
+            another space. A matrix is a numerical representation of a coordinate system, and its
+            values are expressed in the destination coordinate system. Therefore, a transformation
+            matrix takes values in one coordinate system and transforms them into another. It does
+            this by taking the basis vectors and origin of the input coordinate system and
+            represents them relative to the output space. To put it another way, the transformation
+            from space A to space B is what space A looks like from an observer in space B.</p><p>A rotation matrix is just a transform that expresses the basis vectors of the input
+            space in a different orientation. The length of the basis vectors will be the same, and
+            the origin will not change. Also, the angle between the basis vectors will not change.
+            All that changes is the relative direction of all of the basis vectors.</p><p>Therefore, a rotation matrix is not really a <span class="quote">&#8220;<span class="quote">rotation</span>&#8221;</span> matrix; it is an
+                <span class="emphasis"><em>orientation</em></span> matrix. It defines the orientation of one space
+            relative to another space. Remember this, and you will avoid many pitfalls when you
+            start dealing with more complex transformations.</p><p>For any two spaces, the orientation transformation between then can be expressed as
+            rotating the source space by some angle around a particular axis (specified in the
+            initial space). This is true for any change of orientation.</p><p>A common rotation question is to therefore compute a rotation around an arbitrary
+            axis. Or to put it more correctly, to determine the orientation of a space if it is
+            rotated around an arbitrary axis. The axis of rotation is expressed in terms of the
+            initial space. In 2D, there is only one axis that can be rotated around and still remain
+            within that 2D plane: the Z-axis.</p><p>In 3D, there are many possible axes of rotation. It does not have to be one of the
+            initial space's basis axes; it can be any arbitrary direction. Of course, the problem is
+            made much simpler if one rotates only around the primary axes.</p><p>Deriving these matrix equations is beyond the scope of this tutorial; so instead, we
+            will simply provide them. To perform rotations along the primary axes, use the following
+            matrices:</p><div class="equation"><a name="d0e6372"></a><p class="title"><b>Equation&nbsp;6.6.&nbsp;Axial Rotation Matrices</b></p><div class="equation-contents"><div class="mediaobject"><img src="AxialRotationMatrices.svg"></div></div></div><br class="equation-break"><p>When using the standard C/C++ library <code class="function">sin</code> and
+                <code class="function">cos</code> functions, the angles must be in radians.</p><p>As useful as these are, the more generic equation for rotation by an angle about an
+            arbitrary axis is as follows.</p><div class="equation"><a name="d0e6388"></a><p class="title"><b>Equation&nbsp;6.7.&nbsp;Angle/Axis Rotation Matrix</b></p><div class="equation-contents"><div class="mediaobject"><img src="AngleAxisRotationMatrix.svg"></div></div></div><br class="equation-break"><p>All of these matrices are such that, from the point of view of an observer looking
+            down the axis of rotation (the positive direction of the axis is pointed into the eye of
+            the observer), the object rotates counter-clockwise with positive angles.</p><p>The <span class="propername">Rotations</span> tutorial shows off each of these
+            rotation matrix functions. Similar to how the others work, there are multiple instances
+            rendered based on functions.</p><div class="figure"><a name="d0e6401"></a><p class="title"><b>Figure&nbsp;6.7.&nbsp;Rotation Project</b></p><div class="figure-contents"><div class="mediaobject"><img src="Rotations.png" alt="Rotation Project"></div></div></div><br class="figure-break"><p>The function that builds the transformation matrix looks like this:</p><div class="example"><a name="d0e6409"></a><p class="title"><b>Example&nbsp;6.4.&nbsp;Rotation Transformation Building</b></p><div class="example-contents"><pre class="programlisting">glm::mat4 ConstructMatrix(<span class="code-keyword">float</span> fElapsedTime)
+{
+    <span class="code-keyword">const</span> glm::mat3 &amp;rotMatrix = CalcRotation(fElapsedTime);
+    glm::mat4 theMat(rotMatrix);
+    theMat[<span class="code-number">3</span>] = glm::vec4(offset, <span class="code-number">1.0f</span>);
+    
+    <span class="code-keyword">return</span> theMat;
+}</pre></div></div><br class="example-break"><p>The constructor of glm::mat4 that takes a glm::mat3 generates a 4x4 matrix with the
+            3x3 matrix in the top-left corner, and all other positions 0 except the bottom-left
+            corner, which is set to 1. As with much of GLM, this works in GLSL as well.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Tut06 Scale.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="Tutorial 06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="Tut06 Fun with Matrices.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Scale&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="/web/20150225192603/http://www.arcsynthesis.org/gltut/index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Fun with Matrices</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:03 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:10 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

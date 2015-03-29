@@ -1,0 +1,279 @@
+<html><head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app4.us.archive.org";archive_analytics.values.server_ms=928;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>About this Book</title><link rel="stylesheet" href="chunked.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Learning Modern 3D Graphics Programming"><link rel="up" href="index.html" title="Learning Modern 3D Graphics Programming"><link rel="prev" href="index.html" title="Learning Modern 3D Graphics Programming"><link rel="next" href="About Need.html" title="What You Need"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.arcsynthesis.org/gltut/About%20this%20Book.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "25";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.arcsynthesis.org/gltut/About%20this%20Book.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150225192608" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20150105072312/http://www.arcsynthesis.org/gltut/About%20this%20Book.html" title="5 Jan 2015">JAN</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 19:26:08 Feb 25, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20150216203805/http://www.arcsynthesis.org/gltut/About%20this%20Book.html" title="20:38:05 Feb 16, 2015"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 19:26:08 Feb 25, 2015">25</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131220145757/http://arcsynthesis.org/gltut/About%20this%20Book.html" title="20 Dec 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 19:26:08 Feb 25, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150225192608*/http://www.arcsynthesis.org/gltut/About%20this%20Book.html" title="See a list of every capture for this URL">52 captures</a>
+           <div class="r" title="Timespan for captures of this URL">12 May 11 - 25 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000010212032_2012:-1:211121111130_2013:-1:112111110324_2014:-1:000012101000_2015:1:120000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">About this Book</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="index.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="About Need.html">Next</a></td></tr></table><hr></div><div class="preface"><div class="titlepage"><div><div><h2 class="title"><a name="d0e22"></a>About this Book</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="About this Book.html#d0e30">Why Read This Book?</a></span></dt><dt><span class="section"><a href="About Need.html">What You Need</a></span></dt><dt><span class="section"><a href="About Organization.html">Organization of This Book</a></span></dt><dt><span class="section"><a href="About Conventions.html">Conventions used in This Book</a></span></dt></dl></div><p>Three dimensional graphics hardware is fast becoming, not merely a staple of computer
+        systems, but an indispensable component. Many operating systems directly use and even
+        require some degree of 3D rendering hardware. Even in the increasingly important mobile
+        computing space, 3D graphics hardware is a standard feature of all but the lowest power
+        devices.</p><p>Understanding how to make the most of that hardware is a difficult challenge, particularly
+        for someone new to graphics and rendering.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e30"></a>Why Read This Book?</h2></div></div></div><p>There are many physical books for teaching graphics. There are many more online
+            repositories of knowledge, in the form of wikis, blogs, tutorials, and forums. So what
+            does this book offer that others do not?</p><p>Programmability. Virtually all of the aforementioned sources instruct beginners using
+            something called <span class="quote">&#8220;<span class="quote">fixed functionality.</span>&#8221;</span> This represents configurations in
+            older graphics processors that define how a particular rendering operation will proceed.
+            It is generally considered easiest to teach neophyte graphics programmers using the
+            fixed function pipeline.</p><p>This is considered true because it is easy to get something to happen with fixed
+            functionality. It's simpler to make pictures that look like something real. The fixed
+            function pipeline is like training wheels for a bicycle.</p><p>There are downsides to this approach. First, much of what is learned with this
+            approach must be inevitably abandoned when the user encounters a graphics problem that
+            must be solved with programmability. Programmability wipes out almost all of the fixed
+            function pipeline, so the knowledge does not easily transfer.</p><p>A more insidious problem is that the fixed function pipeline can give the
+                <span class="emphasis"><em>illusion</em></span> of knowledge. A user can think they understand what
+            they are doing, but they're really just copy-and-pasting code around. Programming thus
+            becomes akin to magical rituals: you put certain bits of code before other bits, and
+            everything seems to work.</p><p>This makes debugging nightmarish. Because the user never really understood what the
+            code does, the user is unable to diagnose what a particular problem could possibly mean.
+            And without that ability, debugging becomes a series of random guesses as to what the
+            problem is.</p><p>By contrast, you cannot use a programmable system successfully without first
+            understanding it. Confronting programmable graphics hardware means confronting issues
+            that fixed function materials often gloss over. This may mean a slower start overall,
+            but when you finally get to the end, you truly <span class="emphasis"><em>know</em></span> how everything
+            works.</p><p>Another problem is that, even if you truly understand the fixed function pipeline, it
+            limits how you think about solving problems. Because of its inflexibility, it focuses
+            your mind along certain problem solving possibilities and away from others. It
+            encourages you to think of textures as pictures; vertex data as texture coordinates,
+            colors, or positions; and the like. By its very nature, it limits creativity and problem
+            solving.</p><p>Lastly, even on mobile systems, fixed functionality is generally not available in the
+            graphics hardware. Programmability is the order of the day for most graphics hardware,
+            and this will only become more true in the future.</p><p>What this book offers is beginner-level instruction on what many consider to be an
+            advanced concept. It teaches programmable rendering for beginning graphics programmers,
+            from the ground up.</p><p>This book also covers some important material that is often neglected or otherwise
+            relegated to <span class="quote">&#8220;<span class="quote">advanced</span>&#8221;</span> concepts. These concepts are not truly advanced,
+            but they are often ignored by most introductory material because they do not work with
+            the fixed function pipeline.</p><p>This book is first and foremost about learning how to be a graphics programmer.
+            Therefore, whenever it is possible and practical, this book will present material in a
+            way that encourages the reader to examine what graphics hardware can do in new and
+            interesting ways. A good graphics programmer sees the graphics hardware as a set of
+            tools to fulfill their needs, and this book tries to encourage this kind of
+            thinking.</p><p>One thing this book is not, however, is a book on graphics APIs. While it does use
+            OpenGL and out of necessity teach rendering concepts in terms of OpenGL, it is not truly
+            a book that is <span class="emphasis"><em>about</em></span> OpenGL. It is not the purpose of this book to
+            teach you all of the ins and outs of the OpenGL API.There will be parts of OpenGL
+            functionality that are not dealt with because they are not relevant to any of the
+            lessons that this book teaches. If you already know graphics and are in need of a book
+            that teaches modern OpenGL programming, this is not it. It may be useful to you in that
+            capacity, but that is not this book's main thrust.</p><p>This book is intended to teach you how to be a graphics programmer. It is not aimed at
+            any particular graphics field; it is designed to cover most of the basics of 3D
+            rendering. So if you want to be a game developer, a CAD program designer, do some
+            computer visualization, or any number of things, this book can still be an asset for
+            you.</p><p>This does not mean that it covers everything there is about 3D graphics. Hardly. It
+            tries to provide a sound foundation for your further exploration in whatever field of 3D
+            graphics you are interested in.</p><p>One topic this book does not cover in depth is optimization. The reason for this is
+            simply that serious optimization is an advanced topic. Optimizations can often be
+            platform-specific, different for different kinds of hardware. They can also be
+            API-specific, as some APIs have different optimization needs. Optimizations may be
+            mentioned here and there, but it is simply too complex of a subject for a beginning
+            graphics programmer. There is a chapter in the appendix covering optimization
+            opportunities, but it only provides a fairly high-level look.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="About Need.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Learning Modern 3D Graphics Programming&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;What You Need</td></tr></table></div></body></html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:26:08 Feb 25, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:08:23 Mar 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
